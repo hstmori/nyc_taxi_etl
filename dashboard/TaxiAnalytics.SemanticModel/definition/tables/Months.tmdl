@@ -1,0 +1,21 @@
+/// ETL export: etl_manifest.csv. Grain and caveats: docs/power-bi.md.
+table Months
+	lineageTag: 54b4d04d-9e15-48c8-b2f2-58459fe5221b
+
+	column source_month
+		dataType: string
+		lineageTag: 888ced9a-b286-4b26-95fd-44d4c4cfddde
+		summarizeBy: none
+		sourceColumn: source_month
+
+	partition Months = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "\etl_manifest.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Selected = Table.SelectColumns(Headers, {"source_month"}),
+				    Typed = Table.TransformColumnTypes(Selected, {{"source_month", type text}}, "en-US")
+				in
+				    Typed
+

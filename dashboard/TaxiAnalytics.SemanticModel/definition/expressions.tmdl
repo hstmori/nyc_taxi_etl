@@ -1,0 +1,3 @@
+expression DataRoot = "Y:\Data Analyst\Data Work\Project Analyst\Taxi\nyc-taxi-etl\artifacts\exports" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 96b167bd-8d66-4259-8041-926cf203a68d
+

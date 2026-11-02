@@ -1,0 +1,1961 @@
+{
+  "checkedAt": "2026-11-02T09:10:55.830Z",
+  "queries": {
+    "shares": {
+      "query": "EVALUATE CALCULATETABLE(SUMMARIZECOLUMNS(Zones[zone],\"Trips\",[Chuyến theo khu vực],\"Share\",[Tỷ trọng chuyến khu vực]),TREATAS({\"2025-01\"},Months[source_month]),TREATAS({\"Manhattan\"},Zones[borough]))",
+      "data": {
+        "rowCount": 66,
+        "isTruncated": false,
+        "columns": [
+          {
+            "name": "Zones[zone]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 0
+          },
+          {
+            "name": "[Trips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 1
+          },
+          {
+            "name": "[Share]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 2
+          }
+        ],
+        "rows": [
+          {
+            "Zones[zone]": "Alphabet City",
+            "[Trips]": 7477,
+            "[Share]": 0.0024217364857905574
+          },
+          {
+            "Zones[zone]": "Battery Park",
+            "[Trips]": 946,
+            "[Share]": 0.00030640132614121536
+          },
+          {
+            "Zones[zone]": "Battery Park City",
+            "[Trips]": 21338,
+            "[Share]": 0.006911196085836421
+          },
+          {
+            "Zones[zone]": "Bloomingdale",
+            "[Trips]": 8573,
+            "[Share]": 0.002776721531721606
+          },
+          {
+            "Zones[zone]": "Central Harlem",
+            "[Trips]": 11033,
+            "[Share]": 0.0035734945362748726
+          },
+          {
+            "Zones[zone]": "Central Harlem North",
+            "[Trips]": 5980,
+            "[Share]": 0.0019368709622880212
+          },
+          {
+            "Zones[zone]": "Central Park",
+            "[Trips]": 48520,
+            "[Share]": 0.015715213894684745
+          },
+          {
+            "Zones[zone]": "Chinatown",
+            "[Trips]": 6181,
+            "[Share]": 0.002001973146806398
+          },
+          {
+            "Zones[zone]": "Clinton East",
+            "[Trips]": 84106,
+            "[Share]": 0.0272412155776248
+          },
+          {
+            "Zones[zone]": "Clinton West",
+            "[Trips]": 18358,
+            "[Share]": 0.005945999519345066
+          },
+          {
+            "Zones[zone]": "East Chelsea",
+            "[Trips]": 91180,
+            "[Share]": 0.02953242380291334
+          },
+          {
+            "Zones[zone]": "East Harlem North",
+            "[Trips]": 8920,
+            "[Share]": 0.002889111870168754
+          },
+          {
+            "Zones[zone]": "East Harlem South",
+            "[Trips]": 23363,
+            "[Share]": 0.00756707630299917
+          },
+          {
+            "Zones[zone]": "East Village",
+            "[Trips]": 81555,
+            "[Share]": 0.02641496844973237
+          },
+          {
+            "Zones[zone]": "Financial District North",
+            "[Trips]": 18044,
+            "[Share]": 0.005844297599251681
+          },
+          {
+            "Zones[zone]": "Financial District South",
+            "[Trips]": 9717,
+            "[Share]": 0.0031472533679854017
+          },
+          {
+            "Zones[zone]": "Flatiron",
+            "[Trips]": 52911,
+            "[Share]": 0.017137421318665802
+          },
+          {
+            "Zones[zone]": "Garment District",
+            "[Trips]": 50713,
+            "[Share]": 0.01642550787801211
+          },
+          {
+            "Zones[zone]": "Gramercy",
+            "[Trips]": 68301,
+            "[Share]": 0.022122110969102698
+          },
+          {
+            "Zones[zone]": "Greenwich Village North",
+            "[Trips]": 49407,
+            "[Share]": 0.016002505624375295
+          },
+          {
+            "Zones[zone]": "Greenwich Village South",
+            "[Trips]": 53471,
+            "[Share]": 0.017318800539214512
+          },
+          {
+            "Zones[zone]": "Hamilton Heights",
+            "[Trips]": 3663,
+            "[Share]": 0.0011864144372677294
+          },
+          {
+            "Zones[zone]": "Highbridge Park",
+            "[Trips]": 21,
+            "[Share]": 0.000006801720770576663
+          },
+          {
+            "Zones[zone]": "Hudson Sq",
+            "[Trips]": 17189,
+            "[Share]": 0.005567370396449631
+          },
+          {
+            "Zones[zone]": "Inwood",
+            "[Trips]": 448,
+            "[Share]": 0.0001451033764389688
+          },
+          {
+            "Zones[zone]": "Inwood Hill Park",
+            "[Trips]": 36,
+            "[Share]": 0.000011660092749559994
+          },
+          {
+            "Zones[zone]": "Kips Bay",
+            "[Trips]": 39185,
+            "[Share]": 0.012691687066430788
+          },
+          {
+            "Zones[zone]": "Lenox Hill East",
+            "[Trips]": 75041,
+            "[Share]": 0.02430513944499254
+          },
+          {
+            "Zones[zone]": "Lenox Hill West",
+            "[Trips]": 81605,
+            "[Share]": 0.026431163022995648
+          },
+          {
+            "Zones[zone]": "Lincoln Square East",
+            "[Trips]": 110513,
+            "[Share]": 0.035794217500892324
+          },
+          {
+            "Zones[zone]": "Lincoln Square West",
+            "[Trips]": 38706,
+            "[Share]": 0.012536543054568586
+          },
+          {
+            "Zones[zone]": "Little Italy/NoLiTa",
+            "[Trips]": 36969,
+            "[Share]": 0.011973943579402317
+          },
+          {
+            "Zones[zone]": "Lower East Side",
+            "[Trips]": 36905,
+            "[Share]": 0.011953214525625321
+          },
+          {
+            "Zones[zone]": "Manhattan Valley",
+            "[Trips]": 27059,
+            "[Share]": 0.008764179158620662
+          },
+          {
+            "Zones[zone]": "Manhattanville",
+            "[Trips]": 2691,
+            "[Share]": 0.0008715919330296095
+          },
+          {
+            "Zones[zone]": "Marble Hill",
+            "[Trips]": 63,
+            "[Share]": 0.00002040516231172999
+          },
+          {
+            "Zones[zone]": "Meatpacking/West Village West",
+            "[Trips]": 33267,
+            "[Share]": 0.010774897374989231
+          },
+          {
+            "Zones[zone]": "Midtown Center",
+            "[Trips]": 169859,
+            "[Share]": 0.05501588039854197
+          },
+          {
+            "Zones[zone]": "Midtown East",
+            "[Trips]": 117875,
+            "[Share]": 0.03817870646817734
+          },
+          {
+            "Zones[zone]": "Midtown North",
+            "[Trips]": 95864,
+            "[Share]": 0.0310495314262172
+          },
+          {
+            "Zones[zone]": "Midtown South",
+            "[Trips]": 76021,
+            "[Share]": 0.024622553080952785
+          },
+          {
+            "Zones[zone]": "Morningside Heights",
+            "[Trips]": 16117,
+            "[Share]": 0.0052201587456849555
+          },
+          {
+            "Zones[zone]": "Murray Hill",
+            "[Trips]": 95549,
+            "[Share]": 0.03094750561465855
+          },
+          {
+            "Zones[zone]": "Penn Station/Madison Sq West",
+            "[Trips]": 119085,
+            "[Share]": 0.038570615141148665
+          },
+          {
+            "Zones[zone]": "Randalls Island",
+            "[Trips]": 120,
+            "[Share]": 0.000038866975831866643
+          },
+          {
+            "Zones[zone]": "Roosevelt Island",
+            "[Trips]": 232,
+            "[Share]": 0.00007514281994160885
+          },
+          {
+            "Zones[zone]": "Seaport",
+            "[Trips]": 6074,
+            "[Share]": 0.0019673167600229836
+          },
+          {
+            "Zones[zone]": "SoHo",
+            "[Trips]": 28988,
+            "[Share]": 0.009388965795117919
+          },
+          {
+            "Zones[zone]": "Stuy Town/Peter Cooper Village",
+            "[Trips]": 5779,
+            "[Share]": 0.0018717687777696445
+          },
+          {
+            "Zones[zone]": "Sutton Place/Turtle Bay North",
+            "[Trips]": 57654,
+            "[Share]": 0.01867363853842033
+          },
+          {
+            "Zones[zone]": "Times Sq/Theatre District",
+            "[Trips]": 125781,
+            "[Share]": 0.04073939239256682
+          },
+          {
+            "Zones[zone]": "TriBeCa/Civic Center",
+            "[Trips]": 45869,
+            "[Share]": 0.01485657762026576
+          },
+          {
+            "Zones[zone]": "Two Bridges/Seward Park",
+            "[Trips]": 5994,
+            "[Share]": 0.0019414054428017388
+          },
+          {
+            "Zones[zone]": "UN/Turtle Bay South",
+            "[Trips]": 36676,
+            "[Share]": 0.011879043380079508
+          },
+          {
+            "Zones[zone]": "Union Sq",
+            "[Trips]": 95820,
+            "[Share]": 0.031035280201745515
+          },
+          {
+            "Zones[zone]": "Upper East Side North",
+            "[Trips]": 155476,
+            "[Share]": 0.050357349453627485
+          },
+          {
+            "Zones[zone]": "Upper East Side South",
+            "[Trips]": 163536,
+            "[Share]": 0.05296791466366786
+          },
+          {
+            "Zones[zone]": "Upper West Side North",
+            "[Trips]": 68576,
+            "[Share]": 0.022211181122050724
+          },
+          {
+            "Zones[zone]": "Upper West Side South",
+            "[Trips]": 96564,
+            "[Share]": 0.03127625545190309
+          },
+          {
+            "Zones[zone]": "Washington Heights North",
+            "[Trips]": 1161,
+            "[Share]": 0.0003760379911733098
+          },
+          {
+            "Zones[zone]": "Washington Heights South",
+            "[Trips]": 3310,
+            "[Share]": 0.0010720807500289883
+          },
+          {
+            "Zones[zone]": "West Chelsea/Hudson Yards",
+            "[Trips]": 65098,
+            "[Share]": 0.021084686605857123
+          },
+          {
+            "Zones[zone]": "West Village",
+            "[Trips]": 77317,
+            "[Share]": 0.025042316419936945
+          },
+          {
+            "Zones[zone]": "World Trade Center",
+            "[Trips]": 16648,
+            "[Share]": 0.0053921451137409655
+          },
+          {
+            "Zones[zone]": "Yorkville East",
+            "[Trips]": 49585,
+            "[Share]": 0.016060158305192564
+          },
+          {
+            "Zones[zone]": "Yorkville West",
+            "[Trips]": 67371,
+            "[Share]": 0.02182089190640573
+          }
+        ],
+        "executionTimeMs": 6
+      }
+    },
+    "allShares": {
+      "query": "EVALUATE SUMMARIZECOLUMNS(Zones[zone],Zones[borough],\"Trips\",[Chuyến theo khu vực],\"Share\",[Tỷ trọng chuyến khu vực])",
+      "data": {
+        "rowCount": 260,
+        "isTruncated": false,
+        "columns": [
+          {
+            "name": "Zones[zone]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 0
+          },
+          {
+            "name": "Zones[borough]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 1
+          },
+          {
+            "name": "[Trips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 2
+          },
+          {
+            "name": "[Share]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 3
+          }
+        ],
+        "rows": [
+          {
+            "Zones[zone]": "Newark Airport",
+            "Zones[borough]": "EWR",
+            "[Trips]": 1054,
+            "[Share]": 0.00009437303044425611
+          },
+          {
+            "Zones[zone]": "Jamaica Bay",
+            "Zones[borough]": "Queens",
+            "[Trips]": 14,
+            "[Share]": 0.0000012535317136808213
+          },
+          {
+            "Zones[zone]": "Allerton/Pelham Gardens",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 792,
+            "[Share]": 0.00007091407980251504
+          },
+          {
+            "Zones[zone]": "Alphabet City",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 31017,
+            "[Share]": 0.0027771995116598596
+          },
+          {
+            "Zones[zone]": "Arden Heights",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 5,
+            "[Share]": 4.4768989774315045e-7
+          },
+          {
+            "Zones[zone]": "Arrochar/Fort Wadsworth",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 282,
+            "[Share]": 0.000025249710232713687
+          },
+          {
+            "Zones[zone]": "Astoria",
+            "Zones[borough]": "Queens",
+            "[Trips]": 16232,
+            "[Share]": 0.0014533804840333637
+          },
+          {
+            "Zones[zone]": "Astoria Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 75,
+            "[Share]": 0.000006715348466147257
+          },
+          {
+            "Zones[zone]": "Auburndale",
+            "Zones[borough]": "Queens",
+            "[Trips]": 380,
+            "[Share]": 0.00003402443222847943
+          },
+          {
+            "Zones[zone]": "Baisley Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 4720,
+            "[Share]": 0.000422619263469534
+          },
+          {
+            "Zones[zone]": "Bath Beach",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 714,
+            "[Share]": 0.00006393011739772188
+          },
+          {
+            "Zones[zone]": "Battery Park",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 3050,
+            "[Share]": 0.00027309083762332175
+          },
+          {
+            "Zones[zone]": "Battery Park City",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 68066,
+            "[Share]": 0.0060944921159570556
+          },
+          {
+            "Zones[zone]": "Bay Ridge",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 3890,
+            "[Share]": 0.0003483027404441711
+          },
+          {
+            "Zones[zone]": "Bay Terrace/Fort Totten",
+            "Zones[borough]": "Queens",
+            "[Trips]": 356,
+            "[Share]": 0.00003187552071931231
+          },
+          {
+            "Zones[zone]": "Bayside",
+            "Zones[borough]": "Queens",
+            "[Trips]": 662,
+            "[Share]": 0.00005927414246119312
+          },
+          {
+            "Zones[zone]": "Bedford",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 7973,
+            "[Share]": 0.0007138863109412277
+          },
+          {
+            "Zones[zone]": "Bedford Park",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1832,
+            "[Share]": 0.00016403357853309034
+          },
+          {
+            "Zones[zone]": "Bellerose",
+            "Zones[borough]": "Queens",
+            "[Trips]": 941,
+            "[Share]": 0.00008425523875526092
+          },
+          {
+            "Zones[zone]": "Belmont",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1049,
+            "[Share]": 0.00009392534054651297
+          },
+          {
+            "Zones[zone]": "Bensonhurst East",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1235,
+            "[Share]": 0.00011057940474255817
+          },
+          {
+            "Zones[zone]": "Bensonhurst West",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1801,
+            "[Share]": 0.0001612579011670828
+          },
+          {
+            "Zones[zone]": "Bloomfield/Emerson Hill",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 72,
+            "[Share]": 0.0000064467345275013665
+          },
+          {
+            "Zones[zone]": "Bloomingdale",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 29574,
+            "[Share]": 0.002647996207171186
+          },
+          {
+            "Zones[zone]": "Boerum Hill",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 10666,
+            "[Share]": 0.0009550120898656886
+          },
+          {
+            "Zones[zone]": "Borough Park",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2999,
+            "[Share]": 0.00026852440066634165
+          },
+          {
+            "Zones[zone]": "Breezy Point/Fort Tilden/Riis Beach",
+            "Zones[borough]": "Queens",
+            "[Trips]": 38,
+            "[Share]": 0.0000034024432228479436
+          },
+          {
+            "Zones[zone]": "Briarwood/Jamaica Hills",
+            "Zones[borough]": "Queens",
+            "[Trips]": 3102,
+            "[Share]": 0.00027774681255985056
+          },
+          {
+            "Zones[zone]": "Brighton Beach",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1133,
+            "[Share]": 0.00010144653082859789
+          },
+          {
+            "Zones[zone]": "Broad Channel",
+            "Zones[borough]": "Queens",
+            "[Trips]": 55,
+            "[Share]": 0.000004924588875174655
+          },
+          {
+            "Zones[zone]": "Bronx Park",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 187,
+            "[Share]": 0.00001674360217559383
+          },
+          {
+            "Zones[zone]": "Bronxdale",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1014,
+            "[Share]": 0.00009079151126231091
+          },
+          {
+            "Zones[zone]": "Brooklyn Heights",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 11135,
+            "[Share]": 0.000997005402273996
+          },
+          {
+            "Zones[zone]": "Brooklyn Navy Yard",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1531,
+            "[Share]": 0.00013708264668895267
+          },
+          {
+            "Zones[zone]": "Brownsville",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 6544,
+            "[Share]": 0.0005859365381662353
+          },
+          {
+            "Zones[zone]": "Bushwick North",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 6657,
+            "[Share]": 0.0005960543298552305
+          },
+          {
+            "Zones[zone]": "Bushwick South",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 9851,
+            "[Share]": 0.0008820386365335551
+          },
+          {
+            "Zones[zone]": "Cambria Heights",
+            "Zones[borough]": "Queens",
+            "[Trips]": 867,
+            "[Share]": 0.00007762942826866229
+          },
+          {
+            "Zones[zone]": "Canarsie",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 7530,
+            "[Share]": 0.0006742209860011846
+          },
+          {
+            "Zones[zone]": "Carroll Gardens",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 3425,
+            "[Share]": 0.0003066675799540581
+          },
+          {
+            "Zones[zone]": "Central Harlem",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 42821,
+            "[Share]": 0.003834105822251889
+          },
+          {
+            "Zones[zone]": "Central Harlem North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 25747,
+            "[Share]": 0.0023053343594385788
+          },
+          {
+            "Zones[zone]": "Central Park",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 143289,
+            "[Share]": 0.012829807551543657
+          },
+          {
+            "Zones[zone]": "Charleston/Tottenville",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 8,
+            "[Share]": 7.163038363890407e-7
+          },
+          {
+            "Zones[zone]": "Chinatown",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 21565,
+            "[Share]": 0.001930886528966208
+          },
+          {
+            "Zones[zone]": "City Island",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 130,
+            "[Share]": 0.000011639937341321912
+          },
+          {
+            "Zones[zone]": "Claremont/Bathgate",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1671,
+            "[Share]": 0.00014961796382576088
+          },
+          {
+            "Zones[zone]": "Clinton East",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 271261,
+            "[Share]": 0.024288161870340948
+          },
+          {
+            "Zones[zone]": "Clinton Hill",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 6988,
+            "[Share]": 0.000625691401085827
+          },
+          {
+            "Zones[zone]": "Clinton West",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 65738,
+            "[Share]": 0.005886047699567845
+          },
+          {
+            "Zones[zone]": "Co-Op City",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 2354,
+            "[Share]": 0.00021077240385747523
+          },
+          {
+            "Zones[zone]": "Cobble Hill",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 3499,
+            "[Share]": 0.00031329339044065666
+          },
+          {
+            "Zones[zone]": "College Point",
+            "Zones[borough]": "Queens",
+            "[Trips]": 885,
+            "[Share]": 0.00007924111190053763
+          },
+          {
+            "Zones[zone]": "Columbia Street",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 959,
+            "[Share]": 0.00008586692238713626
+          },
+          {
+            "Zones[zone]": "Coney Island",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2471,
+            "[Share]": 0.00022124834746466496
+          },
+          {
+            "Zones[zone]": "Corona",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2782,
+            "[Share]": 0.00024909465910428894
+          },
+          {
+            "Zones[zone]": "Country Club",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 115,
+            "[Share]": 0.000010296867648092461
+          },
+          {
+            "Zones[zone]": "Crotona Park",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 54,
+            "[Share]": 0.000004835050895626025
+          },
+          {
+            "Zones[zone]": "Crotona Park East",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1373,
+            "[Share]": 0.0001229356459202691
+          },
+          {
+            "Zones[zone]": "Crown Heights North",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 15111,
+            "[Share]": 0.0013530084089593494
+          },
+          {
+            "Zones[zone]": "Crown Heights South",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 4445,
+            "[Share]": 0.00039799631909366074
+          },
+          {
+            "Zones[zone]": "Cypress Hills",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 3123,
+            "[Share]": 0.0002796271101303718
+          },
+          {
+            "Zones[zone]": "Douglaston",
+            "Zones[borough]": "Queens",
+            "[Trips]": 374,
+            "[Share]": 0.00003348720435118766
+          },
+          {
+            "Zones[zone]": "Downtown Brooklyn/MetroTech",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 11497,
+            "[Share]": 0.0010294181508706001
+          },
+          {
+            "Zones[zone]": "DUMBO/Vinegar Hill",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 9358,
+            "[Share]": 0.0008378964126160804
+          },
+          {
+            "Zones[zone]": "Dyker Heights",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 994,
+            "[Share]": 0.00008900075167133831
+          },
+          {
+            "Zones[zone]": "East Chelsea",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 294458,
+            "[Share]": 0.02636517438193052
+          },
+          {
+            "Zones[zone]": "East Concourse/Concourse Village",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 3658,
+            "[Share]": 0.0003275299291888889
+          },
+          {
+            "Zones[zone]": "East Elmhurst",
+            "Zones[borough]": "Queens",
+            "[Trips]": 30932,
+            "[Share]": 0.002769588783398226
+          },
+          {
+            "Zones[zone]": "East Flatbush/Farragut",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 4867,
+            "[Share]": 0.0004357813464631827
+          },
+          {
+            "Zones[zone]": "East Flatbush/Remsen Village",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 6124,
+            "[Share]": 0.0005483305867558107
+          },
+          {
+            "Zones[zone]": "East Flushing",
+            "Zones[borough]": "Queens",
+            "[Trips]": 340,
+            "[Share]": 0.00003044291304653423
+          },
+          {
+            "Zones[zone]": "East Harlem North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 35892,
+            "[Share]": 0.0032136971619594313
+          },
+          {
+            "Zones[zone]": "East Harlem South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 77133,
+            "[Share]": 0.006906332976524485
+          },
+          {
+            "Zones[zone]": "East New York",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 11691,
+            "[Share]": 0.0010467885189030344
+          },
+          {
+            "Zones[zone]": "East New York/Pennsylvania Avenue",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2994,
+            "[Share]": 0.0002680767107685985
+          },
+          {
+            "Zones[zone]": "East Tremont",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1858,
+            "[Share]": 0.00016636156600135471
+          },
+          {
+            "Zones[zone]": "East Village",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 288053,
+            "[Share]": 0.025791683622921543
+          },
+          {
+            "Zones[zone]": "East Williamsburg",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 9487,
+            "[Share]": 0.0008494468119778537
+          },
+          {
+            "Zones[zone]": "Eastchester",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1244,
+            "[Share]": 0.00011138524655849583
+          },
+          {
+            "Zones[zone]": "Elmhurst",
+            "Zones[borough]": "Queens",
+            "[Trips]": 7456,
+            "[Share]": 0.0006675951755145859
+          },
+          {
+            "Zones[zone]": "Elmhurst/Maspeth",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2674,
+            "[Share]": 0.00023942455731303686
+          },
+          {
+            "Zones[zone]": "Eltingville/Annadale/Prince's Bay",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 7,
+            "[Share]": 6.267658568404106e-7
+          },
+          {
+            "Zones[zone]": "Erasmus",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 3485,
+            "[Share]": 0.0003120398587269759
+          },
+          {
+            "Zones[zone]": "Far Rockaway",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1630,
+            "[Share]": 0.00014594690666426704
+          },
+          {
+            "Zones[zone]": "Financial District North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 65104,
+            "[Share]": 0.005829280620534013
+          },
+          {
+            "Zones[zone]": "Financial District South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 33603,
+            "[Share]": 0.0030087447267726167
+          },
+          {
+            "Zones[zone]": "Flatbush/Ditmas Park",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 8564,
+            "[Share]": 0.0007668032568544681
+          },
+          {
+            "Zones[zone]": "Flatiron",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 176153,
+            "[Share]": 0.015772383711429836
+          },
+          {
+            "Zones[zone]": "Flatlands",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 5153,
+            "[Share]": 0.0004613892086140909
+          },
+          {
+            "Zones[zone]": "Flushing",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2782,
+            "[Share]": 0.00024909465910428894
+          },
+          {
+            "Zones[zone]": "Flushing Meadows-Corona Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1618,
+            "[Share]": 0.0001448724509096835
+          },
+          {
+            "Zones[zone]": "Fordham South",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 918,
+            "[Share]": 0.00008219586522564243
+          },
+          {
+            "Zones[zone]": "Forest Hills",
+            "Zones[borough]": "Queens",
+            "[Trips]": 6794,
+            "[Share]": 0.0006083210330533928
+          },
+          {
+            "Zones[zone]": "Forest Park/Highland Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 159,
+            "[Share]": 0.000014236538748232184
+          },
+          {
+            "Zones[zone]": "Fort Greene",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 11550,
+            "[Share]": 0.0010341636637866776
+          },
+          {
+            "Zones[zone]": "Fresh Meadows",
+            "Zones[borough]": "Queens",
+            "[Trips]": 619,
+            "[Share]": 0.000055424009340602026
+          },
+          {
+            "Zones[zone]": "Freshkills Park",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 1,
+            "[Share]": 8.953797954863009e-8
+          },
+          {
+            "Zones[zone]": "Garment District",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 160383,
+            "[Share]": 0.01436036977394794
+          },
+          {
+            "Zones[zone]": "Glen Oaks",
+            "Zones[borough]": "Queens",
+            "[Trips]": 730,
+            "[Share]": 0.00006536272507049997
+          },
+          {
+            "Zones[zone]": "Glendale",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1579,
+            "[Share]": 0.0001413804697072869
+          },
+          {
+            "Zones[zone]": "Gowanus",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2624,
+            "[Share]": 0.00023494765833560535
+          },
+          {
+            "Zones[zone]": "Gramercy",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 221866,
+            "[Share]": 0.019865433370536364
+          },
+          {
+            "Zones[zone]": "Gravesend",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1022,
+            "[Share]": 0.00009150781509869995
+          },
+          {
+            "Zones[zone]": "Great Kills",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 11,
+            "[Share]": 9.84917775034931e-7
+          },
+          {
+            "Zones[zone]": "Green-Wood Cemetery",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 26,
+            "[Share]": 0.0000023279874682643825
+          },
+          {
+            "Zones[zone]": "Greenpoint",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 10041,
+            "[Share]": 0.0008990508526477948
+          },
+          {
+            "Zones[zone]": "Greenwich Village North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 163206,
+            "[Share]": 0.014613135490213723
+          },
+          {
+            "Zones[zone]": "Greenwich Village South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 177804,
+            "[Share]": 0.015920210915664625
+          },
+          {
+            "Zones[zone]": "Grymes Hill/Clifton",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 75,
+            "[Share]": 0.000006715348466147257
+          },
+          {
+            "Zones[zone]": "Hamilton Heights",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 16099,
+            "[Share]": 0.001441471932753396
+          },
+          {
+            "Zones[zone]": "Hammels/Arverne",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1457,
+            "[Share]": 0.00013045683620235404
+          },
+          {
+            "Zones[zone]": "Heartland Village/Todt Hill",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 60,
+            "[Share]": 0.000005372278772917806
+          },
+          {
+            "Zones[zone]": "Highbridge",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1939,
+            "[Share]": 0.00017361414234479374
+          },
+          {
+            "Zones[zone]": "Highbridge Park",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 133,
+            "[Share]": 0.000011908551279967802
+          },
+          {
+            "Zones[zone]": "Hillcrest/Pomonok",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1590,
+            "[Share]": 0.00014236538748232185
+          },
+          {
+            "Zones[zone]": "Hollis",
+            "Zones[borough]": "Queens",
+            "[Trips]": 906,
+            "[Share]": 0.00008112140947105886
+          },
+          {
+            "Zones[zone]": "Homecrest",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1704,
+            "[Share]": 0.00015257271715086567
+          },
+          {
+            "Zones[zone]": "Howard Beach",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1409,
+            "[Share]": 0.0001261590131840198
+          },
+          {
+            "Zones[zone]": "Hudson Sq",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 58421,
+            "[Share]": 0.005230898303210519
+          },
+          {
+            "Zones[zone]": "Hunts Point",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1765,
+            "[Share]": 0.00015803453390333212
+          },
+          {
+            "Zones[zone]": "Inwood",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 2522,
+            "[Share]": 0.0002258147844216451
+          },
+          {
+            "Zones[zone]": "Inwood Hill Park",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 173,
+            "[Share]": 0.000015490070461913006
+          },
+          {
+            "Zones[zone]": "Jackson Heights",
+            "Zones[borough]": "Queens",
+            "[Trips]": 10191,
+            "[Share]": 0.0009124815495800893
+          },
+          {
+            "Zones[zone]": "Jamaica",
+            "Zones[borough]": "Queens",
+            "[Trips]": 10666,
+            "[Share]": 0.0009550120898656886
+          },
+          {
+            "Zones[zone]": "Jamaica Estates",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1619,
+            "[Share]": 0.00014496198888923212
+          },
+          {
+            "Zones[zone]": "JFK Airport",
+            "Zones[borough]": "Queens",
+            "[Trips]": 432889,
+            "[Share]": 0.03876000642882693
+          },
+          {
+            "Zones[zone]": "Kensington",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2253,
+            "[Share]": 0.0002017290679230636
+          },
+          {
+            "Zones[zone]": "Kew Gardens",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2934,
+            "[Share]": 0.0002627044319956807
+          },
+          {
+            "Zones[zone]": "Kew Gardens Hills",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1523,
+            "[Share]": 0.00013636634285256363
+          },
+          {
+            "Zones[zone]": "Kingsbridge Heights",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1239,
+            "[Share]": 0.00011093755666075269
+          },
+          {
+            "Zones[zone]": "Kips Bay",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 125116,
+            "[Share]": 0.011202633849206403
+          },
+          {
+            "Zones[zone]": "LaGuardia Airport",
+            "Zones[borough]": "Queens",
+            "[Trips]": 282081,
+            "[Share]": 0.025256962809057124
+          },
+          {
+            "Zones[zone]": "Laurelton",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1121,
+            "[Share]": 0.00010037207507401433
+          },
+          {
+            "Zones[zone]": "Lenox Hill East",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 222721,
+            "[Share]": 0.019941988343050443
+          },
+          {
+            "Zones[zone]": "Lenox Hill West",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 248221,
+            "[Share]": 0.02222520682154051
+          },
+          {
+            "Zones[zone]": "Lincoln Square East",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 331158,
+            "[Share]": 0.029651218231365243
+          },
+          {
+            "Zones[zone]": "Lincoln Square West",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 124418,
+            "[Share]": 0.011140136339481459
+          },
+          {
+            "Zones[zone]": "Little Italy/NoLiTa",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 126720,
+            "[Share]": 0.011346252768402405
+          },
+          {
+            "Zones[zone]": "Long Island City/Hunters Point",
+            "Zones[borough]": "Queens",
+            "[Trips]": 18752,
+            "[Share]": 0.0016790161924959115
+          },
+          {
+            "Zones[zone]": "Long Island City/Queens Plaza",
+            "Zones[borough]": "Queens",
+            "[Trips]": 8261,
+            "[Share]": 0.0007396732490512331
+          },
+          {
+            "Zones[zone]": "Longwood",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1257,
+            "[Share]": 0.00011254924029262802
+          },
+          {
+            "Zones[zone]": "Lower East Side",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 133627,
+            "[Share]": 0.011964691593144793
+          },
+          {
+            "Zones[zone]": "Madison",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1213,
+            "[Share]": 0.0001086095691924883
+          },
+          {
+            "Zones[zone]": "Manhattan Beach",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 663,
+            "[Share]": 0.00005936368044074175
+          },
+          {
+            "Zones[zone]": "Manhattan Valley",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 87410,
+            "[Share]": 0.007826514792345756
+          },
+          {
+            "Zones[zone]": "Manhattanville",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 11946,
+            "[Share]": 0.001069620703687935
+          },
+          {
+            "Zones[zone]": "Marble Hill",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 387,
+            "[Share]": 0.000034651198085319846
+          },
+          {
+            "Zones[zone]": "Marine Park/Floyd Bennett Field",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 166,
+            "[Share]": 0.000014863304605072595
+          },
+          {
+            "Zones[zone]": "Marine Park/Mill Basin",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2495,
+            "[Share]": 0.0002233972589738321
+          },
+          {
+            "Zones[zone]": "Mariners Harbor",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 27,
+            "[Share]": 0.0000024175254478130125
+          },
+          {
+            "Zones[zone]": "Maspeth",
+            "Zones[borough]": "Queens",
+            "[Trips]": 4615,
+            "[Share]": 0.00041321777561692785
+          },
+          {
+            "Zones[zone]": "Meatpacking/West Village West",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 112938,
+            "[Share]": 0.010112240334263185
+          },
+          {
+            "Zones[zone]": "Melrose South",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 3219,
+            "[Share]": 0.00028822275616704026
+          },
+          {
+            "Zones[zone]": "Middle Village",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2007,
+            "[Share]": 0.00017970272495410058
+          },
+          {
+            "Zones[zone]": "Midtown Center",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 511895,
+            "[Share]": 0.045834044041046
+          },
+          {
+            "Zones[zone]": "Midtown East",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 359585,
+            "[Share]": 0.03219651437599415
+          },
+          {
+            "Zones[zone]": "Midtown North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 296145,
+            "[Share]": 0.02651622495342906
+          },
+          {
+            "Zones[zone]": "Midtown South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 244245,
+            "[Share]": 0.021869203814855156
+          },
+          {
+            "Zones[zone]": "Midwood",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2264,
+            "[Share]": 0.00020271398569809854
+          },
+          {
+            "Zones[zone]": "Morningside Heights",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 62490,
+            "[Share]": 0.005595228341993894
+          },
+          {
+            "Zones[zone]": "Morrisania/Melrose",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 2400,
+            "[Share]": 0.00021489115091671222
+          },
+          {
+            "Zones[zone]": "Mott Haven/Port Morris",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 6916,
+            "[Share]": 0.0006192446665583257
+          },
+          {
+            "Zones[zone]": "Mount Hope",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 2386,
+            "[Share]": 0.0002136376192030314
+          },
+          {
+            "Zones[zone]": "Murray Hill",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 302665,
+            "[Share]": 0.027100012580086128
+          },
+          {
+            "Zones[zone]": "Murray Hill-Queens",
+            "Zones[borough]": "Queens",
+            "[Trips]": 772,
+            "[Share]": 0.00006912332021154243
+          },
+          {
+            "Zones[zone]": "New Dorp/Midland Beach",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 68,
+            "[Share]": 0.0000060885826093068465
+          },
+          {
+            "Zones[zone]": "North Corona",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1719,
+            "[Share]": 0.00015391578684409513
+          },
+          {
+            "Zones[zone]": "Norwood",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1436,
+            "[Share]": 0.0001285765386318328
+          },
+          {
+            "Zones[zone]": "Oakland Gardens",
+            "Zones[borough]": "Queens",
+            "[Trips]": 507,
+            "[Share]": 0.000045395755631155454
+          },
+          {
+            "Zones[zone]": "Oakwood",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 13,
+            "[Share]": 0.0000011639937341321913
+          },
+          {
+            "Zones[zone]": "Ocean Hill",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 5353,
+            "[Share]": 0.00047929680452381686
+          },
+          {
+            "Zones[zone]": "Ocean Parkway South",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 651,
+            "[Share]": 0.00005828922468615819
+          },
+          {
+            "Zones[zone]": "Old Astoria",
+            "Zones[borough]": "Queens",
+            "[Trips]": 6256,
+            "[Share]": 0.0005601496000562299
+          },
+          {
+            "Zones[zone]": "Ozone Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1546,
+            "[Share]": 0.0001384257163821821
+          },
+          {
+            "Zones[zone]": "Park Slope",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 10688,
+            "[Share]": 0.0009569819254157584
+          },
+          {
+            "Zones[zone]": "Parkchester",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 2405,
+            "[Share]": 0.00021533884081445536
+          },
+          {
+            "Zones[zone]": "Pelham Bay",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 482,
+            "[Share]": 0.00004315730614243971
+          },
+          {
+            "Zones[zone]": "Pelham Bay Park",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 63,
+            "[Share]": 0.000005640892711563695
+          },
+          {
+            "Zones[zone]": "Pelham Parkway",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 955,
+            "[Share]": 0.00008550877046894173
+          },
+          {
+            "Zones[zone]": "Penn Station/Madison Sq West",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 364811,
+            "[Share]": 0.03266443985711529
+          },
+          {
+            "Zones[zone]": "Port Richmond",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 11,
+            "[Share]": 9.84917775034931e-7
+          },
+          {
+            "Zones[zone]": "Prospect-Lefferts Gardens",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 9317,
+            "[Share]": 0.0008342253554545865
+          },
+          {
+            "Zones[zone]": "Prospect Heights",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 4039,
+            "[Share]": 0.00036164389939691695
+          },
+          {
+            "Zones[zone]": "Prospect Park",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 637,
+            "[Share]": 0.000057035692972477366
+          },
+          {
+            "Zones[zone]": "Queens Village",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2168,
+            "[Share]": 0.00019411833966143005
+          },
+          {
+            "Zones[zone]": "Queensboro Hill",
+            "Zones[borough]": "Queens",
+            "[Trips]": 638,
+            "[Share]": 0.000057125230952025997
+          },
+          {
+            "Zones[zone]": "Queensbridge/Ravenswood",
+            "Zones[borough]": "Queens",
+            "[Trips]": 6361,
+            "[Share]": 0.000569551087908836
+          },
+          {
+            "Zones[zone]": "Randalls Island",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 556,
+            "[Share]": 0.00004978311662903833
+          },
+          {
+            "Zones[zone]": "Red Hook",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 3355,
+            "[Share]": 0.00030039992138565394
+          },
+          {
+            "Zones[zone]": "Rego Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2919,
+            "[Share]": 0.0002613613623024512
+          },
+          {
+            "Zones[zone]": "Richmond Hill",
+            "Zones[borough]": "Queens",
+            "[Trips]": 8036,
+            "[Share]": 0.0007195272036527914
+          },
+          {
+            "Zones[zone]": "Ridgewood",
+            "Zones[borough]": "Queens",
+            "[Trips]": 4483,
+            "[Share]": 0.0004013987623165087
+          },
+          {
+            "Zones[zone]": "Rikers Island",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 5,
+            "[Share]": 4.4768989774315045e-7
+          },
+          {
+            "Zones[zone]": "Riverdale/North Riverdale/Fieldston",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 768,
+            "[Share]": 0.00006876516829334791
+          },
+          {
+            "Zones[zone]": "Rockaway Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 522,
+            "[Share]": 0.00004673882532438491
+          },
+          {
+            "Zones[zone]": "Roosevelt Island",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 834,
+            "[Share]": 0.0000746746749435575
+          },
+          {
+            "Zones[zone]": "Rosedale",
+            "Zones[borough]": "Queens",
+            "[Trips]": 1113,
+            "[Share]": 0.0000996557712376253
+          },
+          {
+            "Zones[zone]": "Rossville/Woodrow",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 5,
+            "[Share]": 4.4768989774315045e-7
+          },
+          {
+            "Zones[zone]": "Saint Albans",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2975,
+            "[Share]": 0.0002663754891571745
+          },
+          {
+            "Zones[zone]": "Saint George/New Brighton",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 33,
+            "[Share]": 0.000002954753325104793
+          },
+          {
+            "Zones[zone]": "Saint Michaels Cemetery/Woodside",
+            "Zones[borough]": "Queens",
+            "[Trips]": 603,
+            "[Share]": 0.000053991401667823946
+          },
+          {
+            "Zones[zone]": "Schuylerville/Edgewater Park",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1272,
+            "[Share]": 0.00011389230998585747
+          },
+          {
+            "Zones[zone]": "Seaport",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 21375,
+            "[Share]": 0.0019138743128519682
+          },
+          {
+            "Zones[zone]": "Sheepshead Bay",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1960,
+            "[Share]": 0.00017549443991531497
+          },
+          {
+            "Zones[zone]": "SoHo",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 97282,
+            "[Share]": 0.008710433726449833
+          },
+          {
+            "Zones[zone]": "Soundview/Bruckner",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1953,
+            "[Share]": 0.00017486767405847456
+          },
+          {
+            "Zones[zone]": "Soundview/Castle Hill",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 2932,
+            "[Share]": 0.0002625253560365834
+          },
+          {
+            "Zones[zone]": "South Beach/Dongan Hills",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 117,
+            "[Share]": 0.00001047594360718972
+          },
+          {
+            "Zones[zone]": "South Jamaica",
+            "Zones[borough]": "Queens",
+            "[Trips]": 4119,
+            "[Share]": 0.0003688069377608073
+          },
+          {
+            "Zones[zone]": "South Ozone Park",
+            "Zones[borough]": "Queens",
+            "[Trips]": 8905,
+            "[Share]": 0.000797335707880551
+          },
+          {
+            "Zones[zone]": "South Williamsburg",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1703,
+            "[Share]": 0.00015248317917131705
+          },
+          {
+            "Zones[zone]": "Springfield Gardens North",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2189,
+            "[Share]": 0.00019599863723195128
+          },
+          {
+            "Zones[zone]": "Springfield Gardens South",
+            "Zones[borough]": "Queens",
+            "[Trips]": 2636,
+            "[Share]": 0.0002360221140901889
+          },
+          {
+            "Zones[zone]": "Spuyten Duyvil/Kingsbridge",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1424,
+            "[Share]": 0.00012750208287724924
+          },
+          {
+            "Zones[zone]": "Stapleton",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 132,
+            "[Share]": 0.000011819013300419171
+          },
+          {
+            "Zones[zone]": "Starrett City",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 2031,
+            "[Share]": 0.00018185163646326771
+          },
+          {
+            "Zones[zone]": "Steinway",
+            "Zones[borough]": "Queens",
+            "[Trips]": 5261,
+            "[Share]": 0.0004710593104053429
+          },
+          {
+            "Zones[zone]": "Stuy Town/Peter Cooper Village",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 22070,
+            "[Share]": 0.0019761032086382663
+          },
+          {
+            "Zones[zone]": "Stuyvesant Heights",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 7742,
+            "[Share]": 0.0006932030376654942
+          },
+          {
+            "Zones[zone]": "Sunnyside",
+            "Zones[borough]": "Queens",
+            "[Trips]": 17831,
+            "[Share]": 0.0015965517133316232
+          },
+          {
+            "Zones[zone]": "Sunset Park East",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1522,
+            "[Share]": 0.000136276804873015
+          },
+          {
+            "Zones[zone]": "Sunset Park West",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 4314,
+            "[Share]": 0.0003862668437727902
+          },
+          {
+            "Zones[zone]": "Sutton Place/Turtle Bay North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 179287,
+            "[Share]": 0.016052995739335243
+          },
+          {
+            "Zones[zone]": "Times Sq/Theatre District",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 376361,
+            "[Share]": 0.03369860352090197
+          },
+          {
+            "Zones[zone]": "TriBeCa/Civic Center",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 154186,
+            "[Share]": 0.013805502914685078
+          },
+          {
+            "Zones[zone]": "Two Bridges/Seward Park",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 23605,
+            "[Share]": 0.0021135440072454132
+          },
+          {
+            "Zones[zone]": "UN/Turtle Bay South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 122144,
+            "[Share]": 0.010936526973987873
+          },
+          {
+            "Zones[zone]": "Union Sq",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 311971,
+            "[Share]": 0.02793325301776568
+          },
+          {
+            "Zones[zone]": "University Heights/Morris Heights",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 2286,
+            "[Share]": 0.0002046838212481684
+          },
+          {
+            "Zones[zone]": "Upper East Side North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 454764,
+            "[Share]": 0.04071864973145321
+          },
+          {
+            "Zones[zone]": "Upper East Side South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 489953,
+            "[Share]": 0.04386940169378996
+          },
+          {
+            "Zones[zone]": "Upper West Side North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 209680,
+            "[Share]": 0.018774323551756757
+          },
+          {
+            "Zones[zone]": "Upper West Side South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 294314,
+            "[Share]": 0.026352280912875517
+          },
+          {
+            "Zones[zone]": "Van Cortlandt Park",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 212,
+            "[Share]": 0.00001898205166430958
+          },
+          {
+            "Zones[zone]": "Van Cortlandt Village",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1565,
+            "[Share]": 0.0001401269379936061
+          },
+          {
+            "Zones[zone]": "Van Nest/Morris Park",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1715,
+            "[Share]": 0.0001535576349259006
+          },
+          {
+            "Zones[zone]": "Washington Heights North",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 6280,
+            "[Share]": 0.000562298511565397
+          },
+          {
+            "Zones[zone]": "Washington Heights South",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 15985,
+            "[Share]": 0.001431264603084852
+          },
+          {
+            "Zones[zone]": "West Brighton",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 22,
+            "[Share]": 0.000001969835550069862
+          },
+          {
+            "Zones[zone]": "West Chelsea/Hudson Yards",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 205643,
+            "[Share]": 0.018412858728318937
+          },
+          {
+            "Zones[zone]": "West Concourse",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 4110,
+            "[Share]": 0.0003680010959448697
+          },
+          {
+            "Zones[zone]": "West Farms/Bronx River",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1623,
+            "[Share]": 0.00014532014080742664
+          },
+          {
+            "Zones[zone]": "West Village",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 262060,
+            "[Share]": 0.023464322920514
+          },
+          {
+            "Zones[zone]": "Westchester Village/Unionport",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1715,
+            "[Share]": 0.0001535576349259006
+          },
+          {
+            "Zones[zone]": "Westerleigh",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 38,
+            "[Share]": 0.0000034024432228479436
+          },
+          {
+            "Zones[zone]": "Whitestone",
+            "Zones[borough]": "Queens",
+            "[Trips]": 770,
+            "[Share]": 0.00006894424425244517
+          },
+          {
+            "Zones[zone]": "Willets Point",
+            "Zones[borough]": "Queens",
+            "[Trips]": 73,
+            "[Share]": 0.000006536272507049997
+          },
+          {
+            "Zones[zone]": "Williamsbridge/Olinville",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 2537,
+            "[Share]": 0.00022715785411487455
+          },
+          {
+            "Zones[zone]": "Williamsburg (North Side)",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 15215,
+            "[Share]": 0.001362320358832407
+          },
+          {
+            "Zones[zone]": "Williamsburg (South Side)",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 12066,
+            "[Share]": 0.0010803652612337707
+          },
+          {
+            "Zones[zone]": "Windsor Terrace",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 1315,
+            "[Share]": 0.00011774244310644857
+          },
+          {
+            "Zones[zone]": "Woodhaven",
+            "Zones[borough]": "Queens",
+            "[Trips]": 3189,
+            "[Share]": 0.0002855366167805814
+          },
+          {
+            "Zones[zone]": "Woodlawn/Wakefield",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 1528,
+            "[Share]": 0.00013681403275030677
+          },
+          {
+            "Zones[zone]": "Woodside",
+            "Zones[borough]": "Queens",
+            "[Trips]": 6961,
+            "[Share]": 0.0006232738756380141
+          },
+          {
+            "Zones[zone]": "World Trade Center",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 53296,
+            "[Share]": 0.004772016158023789
+          },
+          {
+            "Zones[zone]": "Yorkville East",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 151221,
+            "[Share]": 0.013540022805323392
+          },
+          {
+            "Zones[zone]": "Yorkville West",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 207171,
+            "[Share]": 0.018549672761069246
+          },
+          {
+            "Zones[zone]": "N/A",
+            "Zones[borough]": "Unknown",
+            "[Trips]": 23106,
+            "[Share]": 0.002068864555450647
+          },
+          {
+            "Zones[zone]": "Outside of NYC",
+            "Zones[borough]": "N/A",
+            "[Trips]": 4083,
+            "[Share]": 0.00036558357049705666
+          }
+        ],
+        "executionTimeMs": 10
+      }
+    }
+  }
+}

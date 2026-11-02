@@ -1,0 +1,90 @@
+/// ETL export: mart_pickup_zone.csv. Grain and caveats: docs/power-bi.md.
+table Pickup
+	lineageTag: 22a31225-213f-4a59-ba01-3028edf5ae14
+
+	measure 'Chuyến theo khu vực' = SUM(Pickup[trip_count])
+		formatString: #,0
+		displayFolder: Dashboard
+		lineageTag: 04a612a6-0626-4821-84c3-62144003bae7
+
+	measure 'Hạng khu vực' = RANKX(ALL(Zones[zone]),[Chuyến theo khu vực],,DESC,Dense)
+		formatString: 0
+		displayFolder: Dashboard
+		lineageTag: 69385503-64eb-4822-b490-4d4405fc6d87
+
+	measure 'Tiền theo khu vực' = SUM(Pickup[recorded_total_amount])
+		formatString: $#,0.00
+		displayFolder: Phân tích chuyên sâu
+		lineageTag: 21bb6161-1075-45a6-ac80-eb67c94bbe2e
+
+	measure 'Tiền / chuyến khu vực' = DIVIDE([Tiền theo khu vực],[Chuyến theo khu vực])
+		formatString: $0.00
+		displayFolder: Phân tích chuyên sâu
+		lineageTag: 76f00046-434a-4c4e-86ca-75d0e80b460f
+
+	measure 'Chuyến gắn cờ khu vực' = SUM(Pickup[flagged_trip_count])
+		formatString: #,0
+		displayFolder: Phân tích chuyên sâu
+		lineageTag: 863893e9-93da-4299-801b-37c61e2dcdda
+
+	measure 'Tỷ lệ gắn cờ khu vực' = DIVIDE([Chuyến gắn cờ khu vực],[Chuyến theo khu vực])
+		formatString: 0.0%
+		displayFolder: Phân tích chuyên sâu
+		lineageTag: 30678ca8-747d-4908-b702-603718102ce8
+
+	/// Share of trips within the external selection; ALLSELECTED removes the table row zone/borough context and preserves month and selected Borough.
+	measure 'Tỷ trọng chuyến khu vực' = DIVIDE([Chuyến theo khu vực],CALCULATE([Chuyến theo khu vực],ALLSELECTED(Zones)))
+		formatString: 0.0%
+		displayFolder: Phân tích chuyên sâu
+		lineageTag: 3e7b4d6a-914f-4f8e-a955-473984259405
+
+	measure 'Số khu vực có chuyến' = COUNTROWS(FILTER(VALUES(Pickup[location_id]),CALCULATE([Chuyến theo khu vực])>0))
+		formatString: #,0
+		displayFolder: Phân tích chuyên sâu
+		lineageTag: 56bd0e1b-221f-43ab-8253-e22b75809e1e
+
+	column source_month
+		dataType: string
+		lineageTag: 20c46448-f60a-4fce-8dba-9dbc192c6491
+		summarizeBy: none
+		sourceColumn: source_month
+
+	column location_id
+		dataType: int64
+		isHidden
+		lineageTag: c0a837db-cb0c-4a7e-9b46-955bcff3ced5
+		summarizeBy: none
+		sourceColumn: location_id
+
+	column trip_count
+		dataType: int64
+		isHidden
+		lineageTag: 4988f05a-d389-43a6-933d-e67472de31fb
+		summarizeBy: none
+		sourceColumn: trip_count
+
+	column recorded_total_amount
+		dataType: double
+		isHidden
+		lineageTag: 5fba1ac6-9f0d-42a6-af30-da9fa5eb33a8
+		summarizeBy: none
+		sourceColumn: recorded_total_amount
+
+	column flagged_trip_count
+		dataType: int64
+		isHidden
+		lineageTag: 9d5c1ec2-c6fa-4d27-973d-88fb58070f54
+		summarizeBy: none
+		sourceColumn: flagged_trip_count
+
+	partition Pickup = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "\mart_pickup_zone.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Selected = Table.SelectColumns(Headers, {"source_month", "location_id", "trip_count", "recorded_total_amount", "flagged_trip_count"}),
+				    Typed = Table.TransformColumnTypes(Selected, {{"source_month", type text}, {"location_id", Int64.Type}, {"trip_count", Int64.Type}, {"recorded_total_amount", type number}, {"flagged_trip_count", Int64.Type}}, "en-US")
+				in
+				    Typed
+

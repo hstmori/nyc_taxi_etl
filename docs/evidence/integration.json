@@ -1,0 +1,116 @@
+{
+  "validated_at_utc": "2026-11-01T07:33:05.612971+00:00",
+  "months": [
+    [
+      "2025-01",
+      3475226,
+      3473153,
+      2073
+    ],
+    [
+      "2025-02",
+      3577543,
+      3572348,
+      5195
+    ],
+    [
+      "2025-03",
+      4145257,
+      4122944,
+      22313
+    ]
+  ],
+  "raw_rows": 11198026,
+  "accepted_rows": 11168445,
+  "quarantined_rows": 29581,
+  "fingerprints_before": {
+    "trips": [
+      11168445,
+      501767408138473663
+    ],
+    "quarantine": [
+      29581,
+      2346236023924059205
+    ],
+    "dq_missing": [
+      60,
+      2925063702812669622
+    ],
+    "dq_checks": [
+      21,
+      17938848321437653004
+    ],
+    "dim_zone": [
+      265,
+      8948828762469294114
+    ]
+  },
+  "fingerprints_after": {
+    "trips": [
+      11168445,
+      501767408138473663
+    ],
+    "quarantine": [
+      29581,
+      2346236023924059205
+    ],
+    "dq_missing": [
+      60,
+      2925063702812669622
+    ],
+    "dq_checks": [
+      21,
+      17938848321437653004
+    ],
+    "dim_zone": [
+      265,
+      8948828762469294114
+    ]
+  },
+  "unchanged_rerun": [
+    {
+      "month": "2025-01",
+      "status": "skipped"
+    },
+    {
+      "month": "2025-02",
+      "status": "skipped"
+    },
+    {
+      "month": "2025-03",
+      "status": "skipped"
+    }
+  ],
+  "forced_rerun": [
+    {
+      "month": "2025-01",
+      "status": "loaded",
+      "raw_rows": 3475226,
+      "accepted_rows": 3473153,
+      "quarantined_rows": 2073,
+      "source_sha256": "9af277e4c0d3f9deb30644da822981e1e7df6af58313170fd3aa8a474485488a",
+      "seconds": 34.5
+    },
+    {
+      "month": "2025-02",
+      "status": "loaded",
+      "raw_rows": 3577543,
+      "accepted_rows": 3572348,
+      "quarantined_rows": 5195,
+      "source_sha256": "037cba555a73663f3a51a2c27816e40e3feb364769942bdf122b9da31e377bd3",
+      "seconds": 53.25
+    },
+    {
+      "month": "2025-03",
+      "status": "loaded",
+      "raw_rows": 4145257,
+      "accepted_rows": 4122944,
+      "quarantined_rows": 22313,
+      "source_sha256": "20c4b77cce457b7cfdae77c5069ca7dc91c167f876a41467f4502ab69487a186",
+      "seconds": 69.96
+    }
+  ],
+  "mart_trip_reconciliation": "passed",
+  "mart_amount_reconciliation": "passed",
+  "negative_amounts_preserved": true
+}

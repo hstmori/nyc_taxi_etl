@@ -1,0 +1,4883 @@
+{
+  "checkedAt": "2026-11-02T09:07:49.204Z",
+  "queries": {
+    "monthly": {
+      "query": "EVALUATE SUMMARIZECOLUMNS(Months[source_month],\"Trips\",[Chuyến theo giờ],\"Days\",[Số ngày cùng thứ],\"Average\",[Chuyến / ngày theo thời điểm],\"Weekend\",[Tỷ trọng chuyến cuối tuần],\"Amount\",[Tiền theo giờ],\"ZoneTrips\",[Chuyến theo khu vực],\"ZoneAmount\",[Tiền theo khu vực],\"ZoneTicket\",[Tiền / chuyến khu vực],\"Flags\",[Chuyến gắn cờ khu vực],\"FlagRate\",[Tỷ lệ gắn cờ khu vực],\"ZoneCount\",[Số khu vực có chuyến])",
+      "data": {
+        "rowCount": 3,
+        "isTruncated": false,
+        "columns": [
+          {
+            "name": "Months[source_month]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 0
+          },
+          {
+            "name": "[Trips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 1
+          },
+          {
+            "name": "[Days]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 2
+          },
+          {
+            "name": "[Average]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 3
+          },
+          {
+            "name": "[Weekend]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 4
+          },
+          {
+            "name": "[Amount]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 5
+          },
+          {
+            "name": "[ZoneTrips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 6
+          },
+          {
+            "name": "[ZoneAmount]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 7
+          },
+          {
+            "name": "[ZoneTicket]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 8
+          },
+          {
+            "name": "[Flags]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 9
+          },
+          {
+            "name": "[FlagRate]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 10
+          },
+          {
+            "name": "[ZoneCount]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 11
+          }
+        ],
+        "rows": [
+          {
+            "Months[source_month]": "2025-01",
+            "[Trips]": 3473153,
+            "[Days]": 31,
+            "[Average]": 112037.19354838709,
+            "[Weekend]": 0.2529695639668048,
+            "[Amount]": 88957650.59999996,
+            "[ZoneTrips]": 3473153,
+            "[ZoneAmount]": 88957650.59999806,
+            "[ZoneTicket]": 25.612937466330465,
+            "[Flags]": 657276,
+            "[FlagRate]": 0.1892447582931129,
+            "[ZoneCount]": 261
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "[Trips]": 3572348,
+            "[Days]": 28,
+            "[Average]": 127583.85714285714,
+            "[Weekend]": 0.2949191960021812,
+            "[Amount]": 89423626.84999998,
+            "[ZoneTrips]": 3572348,
+            "[ZoneAmount]": 89423626.84999868,
+            "[ZoneTicket]": 25.032171235836678,
+            "[Flags]": 915202,
+            "[FlagRate]": 0.25619060629031665,
+            "[ZoneCount]": 257
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "[Trips]": 4122944,
+            "[Days]": 31,
+            "[Average]": 132998.1935483871,
+            "[Weekend]": 0.33627863972928085,
+            "[Amount]": 108311093.56,
+            "[ZoneTrips]": 4122944,
+            "[ZoneAmount]": 108311093.55999747,
+            "[ZoneTicket]": 26.270328571039887,
+            "[Flags]": 1043082,
+            "[FlagRate]": 0.2529944622095279,
+            "[ZoneCount]": 260
+          }
+        ],
+        "executionTimeMs": 20
+      }
+    },
+    "grid": {
+      "query": "EVALUATE SUMMARIZECOLUMNS(Months[source_month],Hourly[iso_weekday],Hourly[pickup_hour],\"Trips\",[Chuyến theo giờ],\"Days\",[Số ngày cùng thứ],\"Average\",[Chuyến / ngày theo thời điểm])",
+      "data": {
+        "rowCount": 504,
+        "isTruncated": false,
+        "columns": [
+          {
+            "name": "Months[source_month]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 0
+          },
+          {
+            "name": "Hourly[iso_weekday]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 1
+          },
+          {
+            "name": "Hourly[pickup_hour]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 2
+          },
+          {
+            "name": "[Trips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 3
+          },
+          {
+            "name": "[Days]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 4
+          },
+          {
+            "name": "[Average]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 5
+          }
+        ],
+        "rows": [
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 7421,
+            "[Days]": 4,
+            "[Average]": 1855.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 4625,
+            "[Days]": 4,
+            "[Average]": 1156.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 12241,
+            "[Days]": 5,
+            "[Average]": 2448.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 7170,
+            "[Days]": 5,
+            "[Average]": 1434
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 11551,
+            "[Days]": 5,
+            "[Average]": 2310.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 23160,
+            "[Days]": 4,
+            "[Average]": 5790
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 27213,
+            "[Days]": 4,
+            "[Average]": 6803.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 3845,
+            "[Days]": 4,
+            "[Average]": 961.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 1920,
+            "[Days]": 4,
+            "[Average]": 480
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 10419,
+            "[Days]": 5,
+            "[Average]": 2083.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 3124,
+            "[Days]": 5,
+            "[Average]": 624.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 5781,
+            "[Days]": 5,
+            "[Average]": 1156.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 17782,
+            "[Days]": 4,
+            "[Average]": 4445.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 21590,
+            "[Days]": 4,
+            "[Average]": 5397.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 2227,
+            "[Days]": 4,
+            "[Average]": 556.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 1032,
+            "[Days]": 4,
+            "[Average]": 258
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 8295,
+            "[Days]": 5,
+            "[Average]": 1659
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 1769,
+            "[Days]": 5,
+            "[Average]": 353.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 3173,
+            "[Days]": 5,
+            "[Average]": 634.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 12291,
+            "[Days]": 4,
+            "[Average]": 3072.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 15120,
+            "[Days]": 4,
+            "[Average]": 3780
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1583,
+            "[Days]": 4,
+            "[Average]": 395.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 755,
+            "[Days]": 4,
+            "[Average]": 188.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 5749,
+            "[Days]": 5,
+            "[Average]": 1149.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1301,
+            "[Days]": 5,
+            "[Average]": 260.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 2227,
+            "[Days]": 5,
+            "[Average]": 445.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 7400,
+            "[Days]": 4,
+            "[Average]": 1850
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 9468,
+            "[Days]": 4,
+            "[Average]": 2367
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1833,
+            "[Days]": 4,
+            "[Average]": 458.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1111,
+            "[Days]": 4,
+            "[Average]": 277.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 4038,
+            "[Days]": 5,
+            "[Average]": 807.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1647,
+            "[Days]": 5,
+            "[Average]": 329.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 2229,
+            "[Days]": 5,
+            "[Average]": 445.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 3916,
+            "[Days]": 4,
+            "[Average]": 979
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 5247,
+            "[Days]": 4,
+            "[Average]": 1311.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3091,
+            "[Days]": 4,
+            "[Average]": 772.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 2881,
+            "[Days]": 4,
+            "[Average]": 720.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 4314,
+            "[Days]": 5,
+            "[Average]": 862.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3762,
+            "[Days]": 5,
+            "[Average]": 752.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 4212,
+            "[Days]": 5,
+            "[Average]": 842.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 1945,
+            "[Days]": 4,
+            "[Average]": 486.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 2335,
+            "[Days]": 4,
+            "[Average]": 583.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 6978,
+            "[Days]": 4,
+            "[Average]": 1744.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 7921,
+            "[Days]": 4,
+            "[Average]": 1980.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 9278,
+            "[Days]": 5,
+            "[Average]": 1855.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 9959,
+            "[Days]": 5,
+            "[Average]": 1991.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 9035,
+            "[Days]": 5,
+            "[Average]": 1807
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 3317,
+            "[Days]": 4,
+            "[Average]": 829.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 3519,
+            "[Days]": 4,
+            "[Average]": 879.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 13760,
+            "[Days]": 4,
+            "[Average]": 3440
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 18119,
+            "[Days]": 4,
+            "[Average]": 4529.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 20056,
+            "[Days]": 5,
+            "[Average]": 4011.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 21410,
+            "[Days]": 5,
+            "[Average]": 4282
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 19030,
+            "[Days]": 5,
+            "[Average]": 3806
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 5033,
+            "[Days]": 4,
+            "[Average]": 1258.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 5107,
+            "[Days]": 4,
+            "[Average]": 1276.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 18315,
+            "[Days]": 4,
+            "[Average]": 4578.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 25403,
+            "[Days]": 4,
+            "[Average]": 6350.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 27455,
+            "[Days]": 5,
+            "[Average]": 5491
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 29834,
+            "[Days]": 5,
+            "[Average]": 5966.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 24357,
+            "[Days]": 5,
+            "[Average]": 4871.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 8141,
+            "[Days]": 4,
+            "[Average]": 2035.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 7691,
+            "[Days]": 4,
+            "[Average]": 1922.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 17358,
+            "[Days]": 4,
+            "[Average]": 4339.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 23575,
+            "[Days]": 4,
+            "[Average]": 5893.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 25436,
+            "[Days]": 5,
+            "[Average]": 5087.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 28255,
+            "[Days]": 5,
+            "[Average]": 5651
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 23211,
+            "[Days]": 5,
+            "[Average]": 4642.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 13009,
+            "[Days]": 4,
+            "[Average]": 3252.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 11925,
+            "[Days]": 4,
+            "[Average]": 2981.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 17631,
+            "[Days]": 4,
+            "[Average]": 4407.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 21251,
+            "[Days]": 4,
+            "[Average]": 5312.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 24192,
+            "[Days]": 5,
+            "[Average]": 4838.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 26762,
+            "[Days]": 5,
+            "[Average]": 5352.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 24386,
+            "[Days]": 5,
+            "[Average]": 4877.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 17393,
+            "[Days]": 4,
+            "[Average]": 4348.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 16593,
+            "[Days]": 4,
+            "[Average]": 4148.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 18799,
+            "[Days]": 4,
+            "[Average]": 4699.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 21364,
+            "[Days]": 4,
+            "[Average]": 5341
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 25568,
+            "[Days]": 5,
+            "[Average]": 5113.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 27482,
+            "[Days]": 5,
+            "[Average]": 5496.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 25794,
+            "[Days]": 5,
+            "[Average]": 5158.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 21103,
+            "[Days]": 4,
+            "[Average]": 5275.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 19884,
+            "[Days]": 4,
+            "[Average]": 4971
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 19824,
+            "[Days]": 4,
+            "[Average]": 4956
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 22894,
+            "[Days]": 4,
+            "[Average]": 5723.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 28070,
+            "[Days]": 5,
+            "[Average]": 5614
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 29780,
+            "[Days]": 5,
+            "[Average]": 5956
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 28146,
+            "[Days]": 5,
+            "[Average]": 5629.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 23961,
+            "[Days]": 4,
+            "[Average]": 5990.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 22644,
+            "[Days]": 4,
+            "[Average]": 5661
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 21193,
+            "[Days]": 4,
+            "[Average]": 5298.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 23243,
+            "[Days]": 4,
+            "[Average]": 5810.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 29315,
+            "[Days]": 5,
+            "[Average]": 5863
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 31165,
+            "[Days]": 5,
+            "[Average]": 6233
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 30005,
+            "[Days]": 5,
+            "[Average]": 6001
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 26678,
+            "[Days]": 4,
+            "[Average]": 6669.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 24428,
+            "[Days]": 4,
+            "[Average]": 6107
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 22947,
+            "[Days]": 4,
+            "[Average]": 5736.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 25964,
+            "[Days]": 4,
+            "[Average]": 6491
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 31738,
+            "[Days]": 5,
+            "[Average]": 6347.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 34323,
+            "[Days]": 5,
+            "[Average]": 6864.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 34084,
+            "[Days]": 5,
+            "[Average]": 6816.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 26891,
+            "[Days]": 4,
+            "[Average]": 6722.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 26238,
+            "[Days]": 4,
+            "[Average]": 6559.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 24601,
+            "[Days]": 4,
+            "[Average]": 6150.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 28060,
+            "[Days]": 4,
+            "[Average]": 7015
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 34402,
+            "[Days]": 5,
+            "[Average]": 6880.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 36665,
+            "[Days]": 5,
+            "[Average]": 7333
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 36338,
+            "[Days]": 5,
+            "[Average]": 7267.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 28836,
+            "[Days]": 4,
+            "[Average]": 7209
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 24642,
+            "[Days]": 4,
+            "[Average]": 6160.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 24078,
+            "[Days]": 4,
+            "[Average]": 6019.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 28715,
+            "[Days]": 4,
+            "[Average]": 7178.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 34423,
+            "[Days]": 5,
+            "[Average]": 6884.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 38099,
+            "[Days]": 5,
+            "[Average]": 7619.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 36260,
+            "[Days]": 5,
+            "[Average]": 7252
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 30809,
+            "[Days]": 4,
+            "[Average]": 7702.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 24524,
+            "[Days]": 4,
+            "[Average]": 6131
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 26956,
+            "[Days]": 4,
+            "[Average]": 6739
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 35242,
+            "[Days]": 4,
+            "[Average]": 8810.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 42599,
+            "[Days]": 5,
+            "[Average]": 8519.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 48548,
+            "[Days]": 5,
+            "[Average]": 9709.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 44360,
+            "[Days]": 5,
+            "[Average]": 8872
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 30844,
+            "[Days]": 4,
+            "[Average]": 7711
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 24798,
+            "[Days]": 4,
+            "[Average]": 6199.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 27183,
+            "[Days]": 4,
+            "[Average]": 6795.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 37610,
+            "[Days]": 4,
+            "[Average]": 9402.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 45058,
+            "[Days]": 5,
+            "[Average]": 9011.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 53054,
+            "[Days]": 5,
+            "[Average]": 10610.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 48519,
+            "[Days]": 5,
+            "[Average]": 9703.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 31576,
+            "[Days]": 4,
+            "[Average]": 7894
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 24771,
+            "[Days]": 4,
+            "[Average]": 6192.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 21715,
+            "[Days]": 4,
+            "[Average]": 5428.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 28524,
+            "[Days]": 4,
+            "[Average]": 7131
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 36704,
+            "[Days]": 5,
+            "[Average]": 7340.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 41703,
+            "[Days]": 5,
+            "[Average]": 8340.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 40818,
+            "[Days]": 5,
+            "[Average]": 8163.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 31032,
+            "[Days]": 4,
+            "[Average]": 7758
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 20425,
+            "[Days]": 4,
+            "[Average]": 5106.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 19554,
+            "[Days]": 4,
+            "[Average]": 4888.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 28441,
+            "[Days]": 4,
+            "[Average]": 7110.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 34730,
+            "[Days]": 5,
+            "[Average]": 6946
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 38069,
+            "[Days]": 5,
+            "[Average]": 7613.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 31382,
+            "[Days]": 5,
+            "[Average]": 6276.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 23948,
+            "[Days]": 4,
+            "[Average]": 5987
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 18769,
+            "[Days]": 4,
+            "[Average]": 4692.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 19496,
+            "[Days]": 4,
+            "[Average]": 4874
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 31910,
+            "[Days]": 4,
+            "[Average]": 7977.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 38002,
+            "[Days]": 5,
+            "[Average]": 7600.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 40815,
+            "[Days]": 5,
+            "[Average]": 8163
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 31937,
+            "[Days]": 5,
+            "[Average]": 6387.4
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 25645,
+            "[Days]": 4,
+            "[Average]": 6411.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 18074,
+            "[Days]": 4,
+            "[Average]": 4518.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 14135,
+            "[Days]": 4,
+            "[Average]": 3533.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 21935,
+            "[Days]": 4,
+            "[Average]": 5483.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 29924,
+            "[Days]": 5,
+            "[Average]": 5984.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 36063,
+            "[Days]": 5,
+            "[Average]": 7212.6
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 34990,
+            "[Days]": 5,
+            "[Average]": 6998
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 29014,
+            "[Days]": 4,
+            "[Average]": 7253.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 16077,
+            "[Days]": 4,
+            "[Average]": 4019.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 9061,
+            "[Days]": 4,
+            "[Average]": 2265.25
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 11198,
+            "[Days]": 4,
+            "[Average]": 2799.5
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 14994,
+            "[Days]": 5,
+            "[Average]": 2998.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 23089,
+            "[Days]": 5,
+            "[Average]": 4617.8
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 34601,
+            "[Days]": 5,
+            "[Average]": 6920.2
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 32483,
+            "[Days]": 4,
+            "[Average]": 8120.75
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 11313,
+            "[Days]": 4,
+            "[Average]": 2828.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 7939,
+            "[Days]": 4,
+            "[Average]": 1984.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 5257,
+            "[Days]": 4,
+            "[Average]": 1314.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 5464,
+            "[Days]": 4,
+            "[Average]": 1366
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 7123,
+            "[Days]": 4,
+            "[Average]": 1780.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 14312,
+            "[Days]": 4,
+            "[Average]": 3578
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 31993,
+            "[Days]": 4,
+            "[Average]": 7998.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 35375,
+            "[Days]": 4,
+            "[Average]": 8843.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 3388,
+            "[Days]": 4,
+            "[Average]": 847
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 2315,
+            "[Days]": 4,
+            "[Average]": 578.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 2332,
+            "[Days]": 4,
+            "[Average]": 583
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 3110,
+            "[Days]": 4,
+            "[Average]": 777.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 6718,
+            "[Days]": 4,
+            "[Average]": 1679.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 24949,
+            "[Days]": 4,
+            "[Average]": 6237.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 27675,
+            "[Days]": 4,
+            "[Average]": 6918.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 2019,
+            "[Days]": 4,
+            "[Average]": 504.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 1067,
+            "[Days]": 4,
+            "[Average]": 266.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 1289,
+            "[Days]": 4,
+            "[Average]": 322.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 1679,
+            "[Days]": 4,
+            "[Average]": 419.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 3776,
+            "[Days]": 4,
+            "[Average]": 944
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 17849,
+            "[Days]": 4,
+            "[Average]": 4462.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 20160,
+            "[Days]": 4,
+            "[Average]": 5040
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1439,
+            "[Days]": 4,
+            "[Average]": 359.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 835,
+            "[Days]": 4,
+            "[Average]": 208.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 940,
+            "[Days]": 4,
+            "[Average]": 235
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1367,
+            "[Days]": 4,
+            "[Average]": 341.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 2337,
+            "[Days]": 4,
+            "[Average]": 584.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 11245,
+            "[Days]": 4,
+            "[Average]": 2811.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 13052,
+            "[Days]": 4,
+            "[Average]": 3263
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1934,
+            "[Days]": 4,
+            "[Average]": 483.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1195,
+            "[Days]": 4,
+            "[Average]": 298.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1388,
+            "[Days]": 4,
+            "[Average]": 347
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1729,
+            "[Days]": 4,
+            "[Average]": 432.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 2528,
+            "[Days]": 4,
+            "[Average]": 632
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 6431,
+            "[Days]": 4,
+            "[Average]": 1607.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 7737,
+            "[Days]": 4,
+            "[Average]": 1934.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3489,
+            "[Days]": 4,
+            "[Average]": 872.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3189,
+            "[Days]": 4,
+            "[Average]": 797.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3408,
+            "[Days]": 4,
+            "[Average]": 852
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3884,
+            "[Days]": 4,
+            "[Average]": 971
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 4126,
+            "[Days]": 4,
+            "[Average]": 1031.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 2860,
+            "[Days]": 4,
+            "[Average]": 715
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3400,
+            "[Days]": 4,
+            "[Average]": 850
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 7727,
+            "[Days]": 4,
+            "[Average]": 1931.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 8024,
+            "[Days]": 4,
+            "[Average]": 2006
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 8708,
+            "[Days]": 4,
+            "[Average]": 2177
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 9572,
+            "[Days]": 4,
+            "[Average]": 2393
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 8736,
+            "[Days]": 4,
+            "[Average]": 2184
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 3975,
+            "[Days]": 4,
+            "[Average]": 993.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 4502,
+            "[Days]": 4,
+            "[Average]": 1125.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 15598,
+            "[Days]": 4,
+            "[Average]": 3899.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 17402,
+            "[Days]": 4,
+            "[Average]": 4350.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 19165,
+            "[Days]": 4,
+            "[Average]": 4791.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 20155,
+            "[Days]": 4,
+            "[Average]": 5038.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 17006,
+            "[Days]": 4,
+            "[Average]": 4251.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 5583,
+            "[Days]": 4,
+            "[Average]": 1395.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 5806,
+            "[Days]": 4,
+            "[Average]": 1451.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 20815,
+            "[Days]": 4,
+            "[Average]": 5203.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 25241,
+            "[Days]": 4,
+            "[Average]": 6310.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 26574,
+            "[Days]": 4,
+            "[Average]": 6643.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 27770,
+            "[Days]": 4,
+            "[Average]": 6942.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 21997,
+            "[Days]": 4,
+            "[Average]": 5499.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 9437,
+            "[Days]": 4,
+            "[Average]": 2359.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 8232,
+            "[Days]": 4,
+            "[Average]": 2058
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 19851,
+            "[Days]": 4,
+            "[Average]": 4962.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 24279,
+            "[Days]": 4,
+            "[Average]": 6069.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 25118,
+            "[Days]": 4,
+            "[Average]": 6279.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 25941,
+            "[Days]": 4,
+            "[Average]": 6485.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 21130,
+            "[Days]": 4,
+            "[Average]": 5282.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 14995,
+            "[Days]": 4,
+            "[Average]": 3748.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 13612,
+            "[Days]": 4,
+            "[Average]": 3403
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 19131,
+            "[Days]": 4,
+            "[Average]": 4782.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 22482,
+            "[Days]": 4,
+            "[Average]": 5620.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 22909,
+            "[Days]": 4,
+            "[Average]": 5727.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 23007,
+            "[Days]": 4,
+            "[Average]": 5751.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 21227,
+            "[Days]": 4,
+            "[Average]": 5306.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 19355,
+            "[Days]": 4,
+            "[Average]": 4838.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 19859,
+            "[Days]": 4,
+            "[Average]": 4964.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 19956,
+            "[Days]": 4,
+            "[Average]": 4989
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 22253,
+            "[Days]": 4,
+            "[Average]": 5563.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 23416,
+            "[Days]": 4,
+            "[Average]": 5854
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 23282,
+            "[Days]": 4,
+            "[Average]": 5820.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 22532,
+            "[Days]": 4,
+            "[Average]": 5633
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 22626,
+            "[Days]": 4,
+            "[Average]": 5656.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 22773,
+            "[Days]": 4,
+            "[Average]": 5693.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 21354,
+            "[Days]": 4,
+            "[Average]": 5338.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 23683,
+            "[Days]": 4,
+            "[Average]": 5920.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 24341,
+            "[Days]": 4,
+            "[Average]": 6085.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 25588,
+            "[Days]": 4,
+            "[Average]": 6397
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 25266,
+            "[Days]": 4,
+            "[Average]": 6316.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 25657,
+            "[Days]": 4,
+            "[Average]": 6414.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 26950,
+            "[Days]": 4,
+            "[Average]": 6737.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 22467,
+            "[Days]": 4,
+            "[Average]": 5616.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 24561,
+            "[Days]": 4,
+            "[Average]": 6140.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 25239,
+            "[Days]": 4,
+            "[Average]": 6309.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 25808,
+            "[Days]": 4,
+            "[Average]": 6452
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 27064,
+            "[Days]": 4,
+            "[Average]": 6766
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 28280,
+            "[Days]": 4,
+            "[Average]": 7070
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 27693,
+            "[Days]": 4,
+            "[Average]": 6923.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 24407,
+            "[Days]": 4,
+            "[Average]": 6101.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 27025,
+            "[Days]": 4,
+            "[Average]": 6756.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 27622,
+            "[Days]": 4,
+            "[Average]": 6905.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 28685,
+            "[Days]": 4,
+            "[Average]": 7171.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 31336,
+            "[Days]": 4,
+            "[Average]": 7834
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 28173,
+            "[Days]": 4,
+            "[Average]": 7043.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 26360,
+            "[Days]": 4,
+            "[Average]": 6590
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 26451,
+            "[Days]": 4,
+            "[Average]": 6612.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 28614,
+            "[Days]": 4,
+            "[Average]": 7153.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 29788,
+            "[Days]": 4,
+            "[Average]": 7447
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 31078,
+            "[Days]": 4,
+            "[Average]": 7769.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 34126,
+            "[Days]": 4,
+            "[Average]": 8531.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 30688,
+            "[Days]": 4,
+            "[Average]": 7672
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 25441,
+            "[Days]": 4,
+            "[Average]": 6360.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 26009,
+            "[Days]": 4,
+            "[Average]": 6502.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 28874,
+            "[Days]": 4,
+            "[Average]": 7218.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 30144,
+            "[Days]": 4,
+            "[Average]": 7536
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 32043,
+            "[Days]": 4,
+            "[Average]": 8010.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 35406,
+            "[Days]": 4,
+            "[Average]": 8851.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 33310,
+            "[Days]": 4,
+            "[Average]": 8327.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 27103,
+            "[Days]": 4,
+            "[Average]": 6775.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 29408,
+            "[Days]": 4,
+            "[Average]": 7352
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 35206,
+            "[Days]": 4,
+            "[Average]": 8801.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 37086,
+            "[Days]": 4,
+            "[Average]": 9271.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 39590,
+            "[Days]": 4,
+            "[Average]": 9897.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 40895,
+            "[Days]": 4,
+            "[Average]": 10223.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 34801,
+            "[Days]": 4,
+            "[Average]": 8700.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 30963,
+            "[Days]": 4,
+            "[Average]": 7740.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 30132,
+            "[Days]": 4,
+            "[Average]": 7533
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 38786,
+            "[Days]": 4,
+            "[Average]": 9696.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 41042,
+            "[Days]": 4,
+            "[Average]": 10260.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 45426,
+            "[Days]": 4,
+            "[Average]": 11356.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 47940,
+            "[Days]": 4,
+            "[Average]": 11985
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 40403,
+            "[Days]": 4,
+            "[Average]": 10100.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 30274,
+            "[Days]": 4,
+            "[Average]": 7568.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 24460,
+            "[Days]": 4,
+            "[Average]": 6115
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 31158,
+            "[Days]": 4,
+            "[Average]": 7789.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 33978,
+            "[Days]": 4,
+            "[Average]": 8494.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 39393,
+            "[Days]": 4,
+            "[Average]": 9848.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 44155,
+            "[Days]": 4,
+            "[Average]": 11038.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 42764,
+            "[Days]": 4,
+            "[Average]": 10691
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 21042,
+            "[Days]": 4,
+            "[Average]": 5260.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 23109,
+            "[Days]": 4,
+            "[Average]": 5777.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 32963,
+            "[Days]": 4,
+            "[Average]": 8240.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 32915,
+            "[Days]": 4,
+            "[Average]": 8228.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 36777,
+            "[Days]": 4,
+            "[Average]": 9194.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 35989,
+            "[Days]": 4,
+            "[Average]": 8997.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 35340,
+            "[Days]": 4,
+            "[Average]": 8835
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 18258,
+            "[Days]": 4,
+            "[Average]": 4564.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 21481,
+            "[Days]": 4,
+            "[Average]": 5370.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 34810,
+            "[Days]": 4,
+            "[Average]": 8702.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 37101,
+            "[Days]": 4,
+            "[Average]": 9275.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 39092,
+            "[Days]": 4,
+            "[Average]": 9773
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 34463,
+            "[Days]": 4,
+            "[Average]": 8615.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 34107,
+            "[Days]": 4,
+            "[Average]": 8526.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 19285,
+            "[Days]": 4,
+            "[Average]": 4821.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 16222,
+            "[Days]": 4,
+            "[Average]": 4055.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 25442,
+            "[Days]": 4,
+            "[Average]": 6360.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 31989,
+            "[Days]": 4,
+            "[Average]": 7997.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 36248,
+            "[Days]": 4,
+            "[Average]": 9062
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 37639,
+            "[Days]": 4,
+            "[Average]": 9409.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 39627,
+            "[Days]": 4,
+            "[Average]": 9906.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 19834,
+            "[Days]": 4,
+            "[Average]": 4958.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 9481,
+            "[Days]": 4,
+            "[Average]": 2370.25
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 13126,
+            "[Days]": 4,
+            "[Average]": 3281.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 17179,
+            "[Days]": 4,
+            "[Average]": 4294.75
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 25962,
+            "[Days]": 4,
+            "[Average]": 6490.5
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 38592,
+            "[Days]": 4,
+            "[Average]": 9648
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 39948,
+            "[Days]": 4,
+            "[Average]": 9987
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 13772,
+            "[Days]": 4,
+            "[Average]": 3443
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 9217,
+            "[Days]": 5,
+            "[Average]": 1843.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 6494,
+            "[Days]": 4,
+            "[Average]": 1623.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 6457,
+            "[Days]": 4,
+            "[Average]": 1614.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 8618,
+            "[Days]": 4,
+            "[Average]": 2154.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 15929,
+            "[Days]": 4,
+            "[Average]": 3982.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 40628,
+            "[Days]": 5,
+            "[Average]": 8125.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 0,
+            "[Trips]": 47569,
+            "[Days]": 5,
+            "[Average]": 9513.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 4641,
+            "[Days]": 5,
+            "[Average]": 928.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 2739,
+            "[Days]": 4,
+            "[Average]": 684.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 3060,
+            "[Days]": 4,
+            "[Average]": 765
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 3962,
+            "[Days]": 4,
+            "[Average]": 990.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 7813,
+            "[Days]": 4,
+            "[Average]": 1953.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 29281,
+            "[Days]": 5,
+            "[Average]": 5856.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 1,
+            "[Trips]": 36728,
+            "[Days]": 5,
+            "[Average]": 7345.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 2385,
+            "[Days]": 5,
+            "[Average]": 477
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 1321,
+            "[Days]": 4,
+            "[Average]": 330.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 1511,
+            "[Days]": 4,
+            "[Average]": 377.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 2053,
+            "[Days]": 4,
+            "[Average]": 513.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 4419,
+            "[Days]": 4,
+            "[Average]": 1104.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 19265,
+            "[Days]": 5,
+            "[Average]": 3853
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 2,
+            "[Trips]": 21293,
+            "[Days]": 5,
+            "[Average]": 4258.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1790,
+            "[Days]": 5,
+            "[Average]": 358
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1134,
+            "[Days]": 4,
+            "[Average]": 283.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1088,
+            "[Days]": 4,
+            "[Average]": 272
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 1469,
+            "[Days]": 4,
+            "[Average]": 367.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 2922,
+            "[Days]": 4,
+            "[Average]": 730.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 12860,
+            "[Days]": 5,
+            "[Average]": 2572
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 3,
+            "[Trips]": 20114,
+            "[Days]": 5,
+            "[Average]": 4022.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 2670,
+            "[Days]": 5,
+            "[Average]": 534
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1451,
+            "[Days]": 4,
+            "[Average]": 362.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 1651,
+            "[Days]": 4,
+            "[Average]": 412.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 2179,
+            "[Days]": 4,
+            "[Average]": 544.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 3355,
+            "[Days]": 4,
+            "[Average]": 838.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 8652,
+            "[Days]": 5,
+            "[Average]": 1730.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 4,
+            "[Trips]": 13241,
+            "[Days]": 5,
+            "[Average]": 2648.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 5263,
+            "[Days]": 5,
+            "[Average]": 1052.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3403,
+            "[Days]": 4,
+            "[Average]": 850.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 3535,
+            "[Days]": 4,
+            "[Average]": 883.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 4527,
+            "[Days]": 4,
+            "[Average]": 1131.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 4714,
+            "[Days]": 4,
+            "[Average]": 1178.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 4819,
+            "[Days]": 5,
+            "[Average]": 963.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 5,
+            "[Trips]": 7031,
+            "[Days]": 5,
+            "[Average]": 1406.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 11854,
+            "[Days]": 5,
+            "[Average]": 2370.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 8609,
+            "[Days]": 4,
+            "[Average]": 2152.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 8675,
+            "[Days]": 4,
+            "[Average]": 2168.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 9639,
+            "[Days]": 4,
+            "[Average]": 2409.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 8756,
+            "[Days]": 4,
+            "[Average]": 2189
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 5475,
+            "[Days]": 5,
+            "[Average]": 1095
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 6,
+            "[Trips]": 7409,
+            "[Days]": 5,
+            "[Average]": 1481.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 22574,
+            "[Days]": 5,
+            "[Average]": 4514.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 18487,
+            "[Days]": 4,
+            "[Average]": 4621.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 18550,
+            "[Days]": 4,
+            "[Average]": 4637.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 19667,
+            "[Days]": 4,
+            "[Average]": 4916.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 16495,
+            "[Days]": 4,
+            "[Average]": 4123.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 7907,
+            "[Days]": 5,
+            "[Average]": 1581.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 7,
+            "[Trips]": 9010,
+            "[Days]": 5,
+            "[Average]": 1802
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 30209,
+            "[Days]": 5,
+            "[Average]": 6041.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 26326,
+            "[Days]": 4,
+            "[Average]": 6581.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 26500,
+            "[Days]": 4,
+            "[Average]": 6625
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 27255,
+            "[Days]": 4,
+            "[Average]": 6813.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 21283,
+            "[Days]": 4,
+            "[Average]": 5320.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 12614,
+            "[Days]": 5,
+            "[Average]": 2522.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 8,
+            "[Trips]": 12661,
+            "[Days]": 5,
+            "[Average]": 2532.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 28068,
+            "[Days]": 5,
+            "[Average]": 5613.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 25204,
+            "[Days]": 4,
+            "[Average]": 6301
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 25668,
+            "[Days]": 4,
+            "[Average]": 6417
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 25697,
+            "[Days]": 4,
+            "[Average]": 6424.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 20782,
+            "[Days]": 4,
+            "[Average]": 5195.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 18813,
+            "[Days]": 5,
+            "[Average]": 3762.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 9,
+            "[Trips]": 18975,
+            "[Days]": 5,
+            "[Average]": 3795
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 26214,
+            "[Days]": 5,
+            "[Average]": 5242.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 22870,
+            "[Days]": 4,
+            "[Average]": 5717.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 23072,
+            "[Days]": 4,
+            "[Average]": 5768
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 23756,
+            "[Days]": 4,
+            "[Average]": 5939
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 21201,
+            "[Days]": 4,
+            "[Average]": 5300.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 24141,
+            "[Days]": 5,
+            "[Average]": 4828.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 10,
+            "[Trips]": 25373,
+            "[Days]": 5,
+            "[Average]": 5074.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 26371,
+            "[Days]": 5,
+            "[Average]": 5274.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 22899,
+            "[Days]": 4,
+            "[Average]": 5724.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 23315,
+            "[Days]": 4,
+            "[Average]": 5828.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 24906,
+            "[Days]": 4,
+            "[Average]": 6226.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 23048,
+            "[Days]": 4,
+            "[Average]": 5762
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 28864,
+            "[Days]": 5,
+            "[Average]": 5772.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 11,
+            "[Trips]": 29161,
+            "[Days]": 5,
+            "[Average]": 5832.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 27758,
+            "[Days]": 5,
+            "[Average]": 5551.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 24284,
+            "[Days]": 4,
+            "[Average]": 6071
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 25233,
+            "[Days]": 4,
+            "[Average]": 6308.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 26713,
+            "[Days]": 4,
+            "[Average]": 6678.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 25060,
+            "[Days]": 4,
+            "[Average]": 6265
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 32377,
+            "[Days]": 5,
+            "[Average]": 6475.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 12,
+            "[Trips]": 32321,
+            "[Days]": 5,
+            "[Average]": 6464.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 29526,
+            "[Days]": 5,
+            "[Average]": 5905.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 25303,
+            "[Days]": 4,
+            "[Average]": 6325.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 27277,
+            "[Days]": 4,
+            "[Average]": 6819.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 27756,
+            "[Days]": 4,
+            "[Average]": 6939
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 26408,
+            "[Days]": 4,
+            "[Average]": 6602
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 35272,
+            "[Days]": 5,
+            "[Average]": 7054.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 13,
+            "[Trips]": 33608,
+            "[Days]": 5,
+            "[Average]": 6721.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 32302,
+            "[Days]": 5,
+            "[Average]": 6460.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 27457,
+            "[Days]": 4,
+            "[Average]": 6864.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 28407,
+            "[Days]": 4,
+            "[Average]": 7101.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 29979,
+            "[Days]": 4,
+            "[Average]": 7494.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 29080,
+            "[Days]": 4,
+            "[Average]": 7270
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 36517,
+            "[Days]": 5,
+            "[Average]": 7303.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 14,
+            "[Trips]": 34736,
+            "[Days]": 5,
+            "[Average]": 6947.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 33723,
+            "[Days]": 5,
+            "[Average]": 6744.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 28479,
+            "[Days]": 4,
+            "[Average]": 7119.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 30994,
+            "[Days]": 4,
+            "[Average]": 7748.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 31894,
+            "[Days]": 4,
+            "[Average]": 7973.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 30612,
+            "[Days]": 4,
+            "[Average]": 7653
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 37771,
+            "[Days]": 5,
+            "[Average]": 7554.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 15,
+            "[Trips]": 33330,
+            "[Days]": 5,
+            "[Average]": 6666
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 34206,
+            "[Days]": 5,
+            "[Average]": 6841.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 29148,
+            "[Days]": 4,
+            "[Average]": 7287
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 33789,
+            "[Days]": 4,
+            "[Average]": 8447.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 33086,
+            "[Days]": 4,
+            "[Average]": 8271.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 30636,
+            "[Days]": 4,
+            "[Average]": 7659
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 41452,
+            "[Days]": 5,
+            "[Average]": 8290.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 16,
+            "[Trips]": 34477,
+            "[Days]": 5,
+            "[Average]": 6895.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 38956,
+            "[Days]": 5,
+            "[Average]": 7791.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 33815,
+            "[Days]": 4,
+            "[Average]": 8453.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 39433,
+            "[Days]": 4,
+            "[Average]": 9858.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 40152,
+            "[Days]": 4,
+            "[Average]": 10038
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 34964,
+            "[Days]": 4,
+            "[Average]": 8741
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 47505,
+            "[Days]": 5,
+            "[Average]": 9501
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 17,
+            "[Trips]": 35604,
+            "[Days]": 5,
+            "[Average]": 7120.8
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 40970,
+            "[Days]": 5,
+            "[Average]": 8194
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 37225,
+            "[Days]": 4,
+            "[Average]": 9306.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 42942,
+            "[Days]": 4,
+            "[Average]": 10735.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 44809,
+            "[Days]": 4,
+            "[Average]": 11202.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 41354,
+            "[Days]": 4,
+            "[Average]": 10338.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 55403,
+            "[Days]": 5,
+            "[Average]": 11080.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 18,
+            "[Trips]": 36461,
+            "[Days]": 5,
+            "[Average]": 7292.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 33635,
+            "[Days]": 5,
+            "[Average]": 6727
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 32535,
+            "[Days]": 4,
+            "[Average]": 8133.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 38334,
+            "[Days]": 4,
+            "[Average]": 9583.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 43298,
+            "[Days]": 4,
+            "[Average]": 10824.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 41231,
+            "[Days]": 4,
+            "[Average]": 10307.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 58450,
+            "[Days]": 5,
+            "[Average]": 11690
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 19,
+            "[Trips]": 34107,
+            "[Days]": 5,
+            "[Average]": 6821.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 31598,
+            "[Days]": 5,
+            "[Average]": 6319.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 34664,
+            "[Days]": 4,
+            "[Average]": 8666
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 40251,
+            "[Days]": 4,
+            "[Average]": 10062.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 45536,
+            "[Days]": 4,
+            "[Average]": 11384
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 37529,
+            "[Days]": 4,
+            "[Average]": 9382.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 51720,
+            "[Days]": 5,
+            "[Average]": 10344
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 20,
+            "[Trips]": 30653,
+            "[Days]": 5,
+            "[Average]": 6130.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 33935,
+            "[Days]": 5,
+            "[Average]": 6787
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 36284,
+            "[Days]": 4,
+            "[Average]": 9071
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 40058,
+            "[Days]": 4,
+            "[Average]": 10014.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 47689,
+            "[Days]": 4,
+            "[Average]": 11922.25
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 33430,
+            "[Days]": 4,
+            "[Average]": 8357.5
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 48767,
+            "[Days]": 5,
+            "[Average]": 9753.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 21,
+            "[Trips]": 27602,
+            "[Days]": 5,
+            "[Average]": 5520.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 27657,
+            "[Days]": 5,
+            "[Average]": 5531.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 29611,
+            "[Days]": 4,
+            "[Average]": 7402.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 34907,
+            "[Days]": 4,
+            "[Average]": 8726.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 41859,
+            "[Days]": 4,
+            "[Average]": 10464.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 34112,
+            "[Days]": 4,
+            "[Average]": 8528
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 53391,
+            "[Days]": 5,
+            "[Average]": 10678.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 22,
+            "[Trips]": 22627,
+            "[Days]": 5,
+            "[Average]": 4525.4
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 1,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 16691,
+            "[Days]": 5,
+            "[Average]": 3338.2
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 2,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 14227,
+            "[Days]": 4,
+            "[Average]": 3556.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 3,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 19007,
+            "[Days]": 4,
+            "[Average]": 4751.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 4,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 29411,
+            "[Days]": 4,
+            "[Average]": 7352.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 5,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 35547,
+            "[Days]": 4,
+            "[Average]": 8886.75
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 6,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 54568,
+            "[Days]": 5,
+            "[Average]": 10913.6
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Hourly[iso_weekday]": 7,
+            "Hourly[pickup_hour]": 23,
+            "[Trips]": 15855,
+            "[Days]": 5,
+            "[Average]": 3171
+          }
+        ],
+        "executionTimeMs": 23
+      }
+    },
+    "zones": {
+      "query": "EVALUATE SUMMARIZECOLUMNS(Months[source_month],Zones[borough],\"Trips\",[Chuyến theo khu vực],\"Amount\",[Tiền theo khu vực],\"Ticket\",[Tiền / chuyến khu vực],\"Flags\",[Chuyến gắn cờ khu vực],\"FlagRate\",[Tỷ lệ gắn cờ khu vực])",
+      "data": {
+        "rowCount": 24,
+        "isTruncated": false,
+        "columns": [
+          {
+            "name": "Months[source_month]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 0
+          },
+          {
+            "name": "Zones[borough]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 1
+          },
+          {
+            "name": "[Trips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 2
+          },
+          {
+            "name": "[Amount]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 3
+          },
+          {
+            "name": "[Ticket]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 4
+          },
+          {
+            "name": "[Flags]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 5
+          },
+          {
+            "name": "[FlagRate]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 6
+          }
+        ],
+        "rows": [
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "EWR",
+            "[Trips]": 376,
+            "[Amount]": 35564.38,
+            "[Ticket]": 94.58611702127659,
+            "[Flags]": 299,
+            "[FlagRate]": 0.7952127659574468
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "Queens",
+            "[Trips]": 294852,
+            "[Amount]": 19261868.01999812,
+            "[Ticket]": 65.32724220964457,
+            "[Flags]": 49979,
+            "[FlagRate]": 0.16950537896978823
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 14720,
+            "[Amount]": 461399.4800000001,
+            "[Ticket]": 31.345073369565224,
+            "[Flags]": 8823,
+            "[FlagRate]": 0.5993885869565218
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 3087454,
+            "[Amount]": 67052433.719999924,
+            "[Ticket]": 21.71771100719231,
+            "[Flags]": 554315,
+            "[FlagRate]": 0.17953789756867633
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 253,
+            "[Amount]": 9135.76,
+            "[Ticket]": 36.1097233201581,
+            "[Flags]": 182,
+            "[FlagRate]": 0.7193675889328063
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 66025,
+            "[Amount]": 1790446.9199999995,
+            "[Ticket]": 27.117711775842476,
+            "[Flags]": 42030,
+            "[FlagRate]": 0.6365770541461567
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "Unknown",
+            "[Trips]": 8094,
+            "[Amount]": 223205.2600000001,
+            "[Ticket]": 27.57663207314061,
+            "[Flags]": 803,
+            "[FlagRate]": 0.0992092908327156
+          },
+          {
+            "Months[source_month]": "2025-01",
+            "Zones[borough]": "N/A",
+            "[Trips]": 1379,
+            "[Amount]": 123597.06000000008,
+            "[Ticket]": 89.62803480783182,
+            "[Flags]": 845,
+            "[FlagRate]": 0.6127628716461204
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "EWR",
+            "[Trips]": 314,
+            "[Amount]": 30798.019999999997,
+            "[Ticket]": 98.08286624203821,
+            "[Flags]": 238,
+            "[FlagRate]": 0.7579617834394905
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "Queens",
+            "[Trips]": 290944,
+            "[Amount]": 17062962.229998812,
+            "[Ticket]": 58.64689503821633,
+            "[Flags]": 71533,
+            "[FlagRate]": 0.24586518367795865
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 21451,
+            "[Amount]": 640591.4,
+            "[Ticket]": 29.863008717542307,
+            "[Flags]": 15610,
+            "[FlagRate]": 0.7277050020978043
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 3153980,
+            "[Amount]": 68821285.26999988,
+            "[Ticket]": 21.820457095479323,
+            "[Flags]": 751719,
+            "[FlagRate]": 0.23833981192017706
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 305,
+            "[Amount]": 11678.28,
+            "[Ticket]": 38.28944262295082,
+            "[Flags]": 251,
+            "[FlagRate]": 0.8229508196721311
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 96762,
+            "[Amount]": 2555902.74,
+            "[Ticket]": 26.414323184721276,
+            "[Flags]": 74404,
+            "[FlagRate]": 0.7689382195489965
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "Unknown",
+            "[Trips]": 7432,
+            "[Amount]": 197987.09000000003,
+            "[Ticket]": 26.639812970936493,
+            "[Flags]": 733,
+            "[FlagRate]": 0.09862755651237891
+          },
+          {
+            "Months[source_month]": "2025-02",
+            "Zones[borough]": "N/A",
+            "[Trips]": 1160,
+            "[Amount]": 102421.82000000005,
+            "[Ticket]": 88.29467241379315,
+            "[Flags]": 714,
+            "[FlagRate]": 0.6155172413793103
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "EWR",
+            "[Trips]": 364,
+            "[Amount]": 34703.15,
+            "[Ticket]": 95.33832417582418,
+            "[Flags]": 305,
+            "[FlagRate]": 0.8379120879120879
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "Queens",
+            "[Trips]": 377573,
+            "[Amount]": 22457925.549997505,
+            "[Ticket]": 59.479691476873356,
+            "[Flags]": 96452,
+            "[FlagRate]": 0.25545258797636483
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "Bronx",
+            "[Trips]": 34185,
+            "[Amount]": 1011052.5999999996,
+            "[Ticket]": 29.575913412315334,
+            "[Flags]": 27197,
+            "[FlagRate]": 0.7955828579786456
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "Manhattan",
+            "[Trips]": 3558233,
+            "[Amount]": 80532509.50999992,
+            "[Ticket]": 22.632725150376583,
+            "[Flags]": 801352,
+            "[FlagRate]": 0.22521065933568712
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "Staten Island",
+            "[Trips]": 429,
+            "[Amount]": 17540.800000000003,
+            "[Ticket]": 40.887645687645694,
+            "[Flags]": 362,
+            "[FlagRate]": 0.8438228438228438
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "Brooklyn",
+            "[Trips]": 143036,
+            "[Amount]": 3894599.999999997,
+            "[Ticket]": 27.228110405771954,
+            "[Flags]": 115624,
+            "[FlagRate]": 0.8083559383651668
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "Unknown",
+            "[Trips]": 7580,
+            "[Amount]": 224117.9999999998,
+            "[Ticket]": 29.567018469656965,
+            "[Flags]": 816,
+            "[FlagRate]": 0.10765171503957784
+          },
+          {
+            "Months[source_month]": "2025-03",
+            "Zones[borough]": "N/A",
+            "[Trips]": 1544,
+            "[Amount]": 138643.95000000007,
+            "[Ticket]": 89.79530440414513,
+            "[Flags]": 974,
+            "[FlagRate]": 0.6308290155440415
+          }
+        ],
+        "executionTimeMs": 5
+      }
+    },
+    "selection": {
+      "query": "EVALUATE CALCULATETABLE(ROW(\"Trips\",[Chuyến theo giờ],\"Days\",[Số ngày cùng thứ],\"Average\",[Chuyến / ngày theo thời điểm],\"Weekend\",[Tỷ trọng chuyến cuối tuần]),TREATAS({\"2025-01\",\"2025-03\"},Months[source_month]),TREATAS({6},Hourly[iso_weekday]),TREATAS({18},Hourly[pickup_hour]))",
+      "data": {
+        "rowCount": 1,
+        "isTruncated": false,
+        "columns": [
+          {
+            "name": "[Trips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 0
+          },
+          {
+            "name": "[Days]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 1
+          },
+          {
+            "name": "[Average]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 2
+          },
+          {
+            "name": "[Weekend]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 3
+          }
+        ],
+        "rows": [
+          {
+            "[Trips]": 86979,
+            "[Days]": 9,
+            "[Average]": 9664.333333333334,
+            "[Weekend]": 0.29818734542226094
+          }
+        ],
+        "executionTimeMs": 14
+      }
+    },
+    "shares": {
+      "query": "EVALUATE CALCULATETABLE(SUMMARIZECOLUMNS(Zones[zone],\"Trips\",[Chuyến theo khu vực],\"Share\",[Tỷ trọng chuyến khu vực]),TREATAS({\"2025-01\"},Months[source_month]),TREATAS({\"Manhattan\"},Zones[borough]))",
+      "data": {
+        "rowCount": 66,
+        "isTruncated": false,
+        "columns": [
+          {
+            "name": "Zones[zone]",
+            "dataType": "String",
+            "isNullable": true,
+            "ordinal": 0
+          },
+          {
+            "name": "[Trips]",
+            "dataType": "Int64",
+            "isNullable": true,
+            "ordinal": 1
+          },
+          {
+            "name": "[Share]",
+            "dataType": "Double",
+            "isNullable": true,
+            "ordinal": 2
+          }
+        ],
+        "rows": [
+          {
+            "Zones[zone]": "Alphabet City",
+            "[Trips]": 7477,
+            "[Share]": 0.0024217364857905574
+          },
+          {
+            "Zones[zone]": "Battery Park",
+            "[Trips]": 946,
+            "[Share]": 0.00030640132614121536
+          },
+          {
+            "Zones[zone]": "Battery Park City",
+            "[Trips]": 21338,
+            "[Share]": 0.006911196085836421
+          },
+          {
+            "Zones[zone]": "Bloomingdale",
+            "[Trips]": 8573,
+            "[Share]": 0.002776721531721606
+          },
+          {
+            "Zones[zone]": "Central Harlem",
+            "[Trips]": 11033,
+            "[Share]": 0.0035734945362748726
+          },
+          {
+            "Zones[zone]": "Central Harlem North",
+            "[Trips]": 5980,
+            "[Share]": 0.0019368709622880212
+          },
+          {
+            "Zones[zone]": "Central Park",
+            "[Trips]": 48520,
+            "[Share]": 0.015715213894684745
+          },
+          {
+            "Zones[zone]": "Chinatown",
+            "[Trips]": 6181,
+            "[Share]": 0.002001973146806398
+          },
+          {
+            "Zones[zone]": "Clinton East",
+            "[Trips]": 84106,
+            "[Share]": 0.0272412155776248
+          },
+          {
+            "Zones[zone]": "Clinton West",
+            "[Trips]": 18358,
+            "[Share]": 0.005945999519345066
+          },
+          {
+            "Zones[zone]": "East Chelsea",
+            "[Trips]": 91180,
+            "[Share]": 0.02953242380291334
+          },
+          {
+            "Zones[zone]": "East Harlem North",
+            "[Trips]": 8920,
+            "[Share]": 0.002889111870168754
+          },
+          {
+            "Zones[zone]": "East Harlem South",
+            "[Trips]": 23363,
+            "[Share]": 0.00756707630299917
+          },
+          {
+            "Zones[zone]": "East Village",
+            "[Trips]": 81555,
+            "[Share]": 0.02641496844973237
+          },
+          {
+            "Zones[zone]": "Financial District North",
+            "[Trips]": 18044,
+            "[Share]": 0.005844297599251681
+          },
+          {
+            "Zones[zone]": "Financial District South",
+            "[Trips]": 9717,
+            "[Share]": 0.0031472533679854017
+          },
+          {
+            "Zones[zone]": "Flatiron",
+            "[Trips]": 52911,
+            "[Share]": 0.017137421318665802
+          },
+          {
+            "Zones[zone]": "Garment District",
+            "[Trips]": 50713,
+            "[Share]": 0.01642550787801211
+          },
+          {
+            "Zones[zone]": "Gramercy",
+            "[Trips]": 68301,
+            "[Share]": 0.022122110969102698
+          },
+          {
+            "Zones[zone]": "Greenwich Village North",
+            "[Trips]": 49407,
+            "[Share]": 0.016002505624375295
+          },
+          {
+            "Zones[zone]": "Greenwich Village South",
+            "[Trips]": 53471,
+            "[Share]": 0.017318800539214512
+          },
+          {
+            "Zones[zone]": "Hamilton Heights",
+            "[Trips]": 3663,
+            "[Share]": 0.0011864144372677294
+          },
+          {
+            "Zones[zone]": "Highbridge Park",
+            "[Trips]": 21,
+            "[Share]": 0.000006801720770576663
+          },
+          {
+            "Zones[zone]": "Hudson Sq",
+            "[Trips]": 17189,
+            "[Share]": 0.005567370396449631
+          },
+          {
+            "Zones[zone]": "Inwood",
+            "[Trips]": 448,
+            "[Share]": 0.0001451033764389688
+          },
+          {
+            "Zones[zone]": "Inwood Hill Park",
+            "[Trips]": 36,
+            "[Share]": 0.000011660092749559994
+          },
+          {
+            "Zones[zone]": "Kips Bay",
+            "[Trips]": 39185,
+            "[Share]": 0.012691687066430788
+          },
+          {
+            "Zones[zone]": "Lenox Hill East",
+            "[Trips]": 75041,
+            "[Share]": 0.02430513944499254
+          },
+          {
+            "Zones[zone]": "Lenox Hill West",
+            "[Trips]": 81605,
+            "[Share]": 0.026431163022995648
+          },
+          {
+            "Zones[zone]": "Lincoln Square East",
+            "[Trips]": 110513,
+            "[Share]": 0.035794217500892324
+          },
+          {
+            "Zones[zone]": "Lincoln Square West",
+            "[Trips]": 38706,
+            "[Share]": 0.012536543054568586
+          },
+          {
+            "Zones[zone]": "Little Italy/NoLiTa",
+            "[Trips]": 36969,
+            "[Share]": 0.011973943579402317
+          },
+          {
+            "Zones[zone]": "Lower East Side",
+            "[Trips]": 36905,
+            "[Share]": 0.011953214525625321
+          },
+          {
+            "Zones[zone]": "Manhattan Valley",
+            "[Trips]": 27059,
+            "[Share]": 0.008764179158620662
+          },
+          {
+            "Zones[zone]": "Manhattanville",
+            "[Trips]": 2691,
+            "[Share]": 0.0008715919330296095
+          },
+          {
+            "Zones[zone]": "Marble Hill",
+            "[Trips]": 63,
+            "[Share]": 0.00002040516231172999
+          },
+          {
+            "Zones[zone]": "Meatpacking/West Village West",
+            "[Trips]": 33267,
+            "[Share]": 0.010774897374989231
+          },
+          {
+            "Zones[zone]": "Midtown Center",
+            "[Trips]": 169859,
+            "[Share]": 0.05501588039854197
+          },
+          {
+            "Zones[zone]": "Midtown East",
+            "[Trips]": 117875,
+            "[Share]": 0.03817870646817734
+          },
+          {
+            "Zones[zone]": "Midtown North",
+            "[Trips]": 95864,
+            "[Share]": 0.0310495314262172
+          },
+          {
+            "Zones[zone]": "Midtown South",
+            "[Trips]": 76021,
+            "[Share]": 0.024622553080952785
+          },
+          {
+            "Zones[zone]": "Morningside Heights",
+            "[Trips]": 16117,
+            "[Share]": 0.0052201587456849555
+          },
+          {
+            "Zones[zone]": "Murray Hill",
+            "[Trips]": 95549,
+            "[Share]": 0.03094750561465855
+          },
+          {
+            "Zones[zone]": "Penn Station/Madison Sq West",
+            "[Trips]": 119085,
+            "[Share]": 0.038570615141148665
+          },
+          {
+            "Zones[zone]": "Randalls Island",
+            "[Trips]": 120,
+            "[Share]": 0.000038866975831866643
+          },
+          {
+            "Zones[zone]": "Roosevelt Island",
+            "[Trips]": 232,
+            "[Share]": 0.00007514281994160885
+          },
+          {
+            "Zones[zone]": "Seaport",
+            "[Trips]": 6074,
+            "[Share]": 0.0019673167600229836
+          },
+          {
+            "Zones[zone]": "SoHo",
+            "[Trips]": 28988,
+            "[Share]": 0.009388965795117919
+          },
+          {
+            "Zones[zone]": "Stuy Town/Peter Cooper Village",
+            "[Trips]": 5779,
+            "[Share]": 0.0018717687777696445
+          },
+          {
+            "Zones[zone]": "Sutton Place/Turtle Bay North",
+            "[Trips]": 57654,
+            "[Share]": 0.01867363853842033
+          },
+          {
+            "Zones[zone]": "Times Sq/Theatre District",
+            "[Trips]": 125781,
+            "[Share]": 0.04073939239256682
+          },
+          {
+            "Zones[zone]": "TriBeCa/Civic Center",
+            "[Trips]": 45869,
+            "[Share]": 0.01485657762026576
+          },
+          {
+            "Zones[zone]": "Two Bridges/Seward Park",
+            "[Trips]": 5994,
+            "[Share]": 0.0019414054428017388
+          },
+          {
+            "Zones[zone]": "UN/Turtle Bay South",
+            "[Trips]": 36676,
+            "[Share]": 0.011879043380079508
+          },
+          {
+            "Zones[zone]": "Union Sq",
+            "[Trips]": 95820,
+            "[Share]": 0.031035280201745515
+          },
+          {
+            "Zones[zone]": "Upper East Side North",
+            "[Trips]": 155476,
+            "[Share]": 0.050357349453627485
+          },
+          {
+            "Zones[zone]": "Upper East Side South",
+            "[Trips]": 163536,
+            "[Share]": 0.05296791466366786
+          },
+          {
+            "Zones[zone]": "Upper West Side North",
+            "[Trips]": 68576,
+            "[Share]": 0.022211181122050724
+          },
+          {
+            "Zones[zone]": "Upper West Side South",
+            "[Trips]": 96564,
+            "[Share]": 0.03127625545190309
+          },
+          {
+            "Zones[zone]": "Washington Heights North",
+            "[Trips]": 1161,
+            "[Share]": 0.0003760379911733098
+          },
+          {
+            "Zones[zone]": "Washington Heights South",
+            "[Trips]": 3310,
+            "[Share]": 0.0010720807500289883
+          },
+          {
+            "Zones[zone]": "West Chelsea/Hudson Yards",
+            "[Trips]": 65098,
+            "[Share]": 0.021084686605857123
+          },
+          {
+            "Zones[zone]": "West Village",
+            "[Trips]": 77317,
+            "[Share]": 0.025042316419936945
+          },
+          {
+            "Zones[zone]": "World Trade Center",
+            "[Trips]": 16648,
+            "[Share]": 0.0053921451137409655
+          },
+          {
+            "Zones[zone]": "Yorkville East",
+            "[Trips]": 49585,
+            "[Share]": 0.016060158305192564
+          },
+          {
+            "Zones[zone]": "Yorkville West",
+            "[Trips]": 67371,
+            "[Share]": 0.02182089190640573
+          }
+        ],
+        "executionTimeMs": 7
+      }
+    }
+  }
+}

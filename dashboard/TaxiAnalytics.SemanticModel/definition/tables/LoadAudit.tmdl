@@ -1,0 +1,67 @@
+/// ETL export: etl_manifest.csv. Grain and caveats: docs/power-bi.md.
+table LoadAudit
+	lineageTag: f88a199c-3807-476d-bbe2-88ffd5cd447a
+
+	measure 'Dòng nguồn' = SUM(LoadAudit[raw_rows])
+		formatString: #,0
+		displayFolder: Dashboard
+		lineageTag: 1f4811a8-f35b-427b-8ef2-335985e52292
+
+	measure 'Dòng chấp nhận' = SUM(LoadAudit[accepted_rows])
+		formatString: #,0
+		displayFolder: Dashboard
+		lineageTag: d9f735fa-dfa0-49b4-9a8f-29f45407c1a7
+
+	measure 'Dòng cách ly' = SUM(LoadAudit[quarantined_rows])
+		formatString: #,0
+		displayFolder: Dashboard
+		lineageTag: 4673619c-7bb7-46db-bc99-faeddccfa60d
+
+	measure 'Tỷ lệ cách ly' = DIVIDE([Dòng cách ly],[Dòng nguồn])
+		formatString: 0.00%
+		displayFolder: Dashboard
+		lineageTag: 6235e15f-393e-407d-96c6-c71405ebcaff
+
+	measure 'Tỷ lệ chấp nhận' = DIVIDE([Dòng chấp nhận],[Dòng nguồn])
+		formatString: 0.00%
+		displayFolder: Dashboard
+		lineageTag: 811da05f-154a-4ce1-a0ec-2fe7c55ade23
+
+	column source_month
+		dataType: string
+		lineageTag: 97c8ddcf-9c71-49c6-bb12-89681391c9e2
+		summarizeBy: none
+		sourceColumn: source_month
+
+	column raw_rows
+		dataType: int64
+		isHidden
+		lineageTag: a09f353f-2ad0-45f9-8f3e-755c278203c9
+		summarizeBy: none
+		sourceColumn: raw_rows
+
+	column accepted_rows
+		dataType: int64
+		isHidden
+		lineageTag: 5d4466d1-47f7-497f-b859-c118cad14d71
+		summarizeBy: none
+		sourceColumn: accepted_rows
+
+	column quarantined_rows
+		dataType: int64
+		isHidden
+		lineageTag: 03284b93-85a6-4460-aae1-f88f20550ab5
+		summarizeBy: none
+		sourceColumn: quarantined_rows
+
+	partition LoadAudit = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "\etl_manifest.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Selected = Table.SelectColumns(Headers, {"source_month", "raw_rows", "accepted_rows", "quarantined_rows"}),
+				    Typed = Table.TransformColumnTypes(Selected, {{"source_month", type text}, {"raw_rows", Int64.Type}, {"accepted_rows", Int64.Type}, {"quarantined_rows", Int64.Type}}, "en-US")
+				in
+				    Typed
+

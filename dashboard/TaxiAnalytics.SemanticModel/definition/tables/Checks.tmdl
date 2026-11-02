@@ -1,0 +1,40 @@
+/// ETL export: dq_checks.csv. Grain and caveats: docs/power-bi.md.
+table Checks
+	lineageTag: 2dae685a-97aa-4266-b0f1-fcb81bb3ee14
+
+	/// Counts overlap across checks. Grand total intentionally blank.
+	measure 'Số dòng theo kiểm tra' = IF(ISINSCOPE(Checks[check_name]), SUM(Checks[row_count]))
+		formatString: #,0
+		displayFolder: Dashboard
+		lineageTag: fc145cb3-9d5a-49e0-81dd-be157f0d052a
+
+	column source_month
+		dataType: string
+		lineageTag: e6161481-8753-446f-91b9-e95ae0ed9543
+		summarizeBy: none
+		sourceColumn: source_month
+
+	column check_name
+		dataType: string
+		lineageTag: 2f9ba86a-a318-4286-a181-a62fbb76e571
+		summarizeBy: none
+		sourceColumn: check_name
+
+	column row_count
+		dataType: int64
+		isHidden
+		lineageTag: b3a7012e-6856-444f-8aad-4a278b3aa401
+		summarizeBy: none
+		sourceColumn: row_count
+
+	partition Checks = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "\dq_checks.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Selected = Table.SelectColumns(Headers, {"source_month", "check_name", "row_count"}),
+				    Typed = Table.TransformColumnTypes(Selected, {{"source_month", type text}, {"check_name", type text}, {"row_count", Int64.Type}}, "en-US")
+				in
+				    Typed
+

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "monthly_scenarios": 3,
+  "weekday_hour_month_cells": 504,
+  "borough_month_scenarios": 24,
+  "zone_shares_checked": 66,
+  "multi_month_weekday_hour_filter": "passed",
+  "weighted_ticket_and_flag_rates": "passed",
+  "all_zone_shares_checked": 260,
+  "source_dax_timestamp": "2026-11-02T09:07:49.204Z",
+  "share_dax_timestamp": "2026-11-02T09:10:55.830Z"
+}

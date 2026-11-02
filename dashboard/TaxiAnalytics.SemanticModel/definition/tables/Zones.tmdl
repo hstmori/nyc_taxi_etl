@@ -1,0 +1,42 @@
+/// ETL export: dim_zone.csv. Grain and caveats: docs/power-bi.md.
+table Zones
+	lineageTag: 7528b8e9-a35a-4419-9275-b299c588887d
+
+	column location_id
+		dataType: int64
+		isHidden
+		lineageTag: 877eb79d-13e0-42ac-a61c-7f637be7b6de
+		summarizeBy: none
+		sourceColumn: location_id
+
+	column borough
+		dataType: string
+		lineageTag: 3ffefd3d-691f-4195-b78c-a72e069eb89a
+		summarizeBy: none
+		sourceColumn: borough
+
+	column zone
+		dataType: string
+		lineageTag: 91872a8d-966b-4e43-9869-caf8c784b332
+		summarizeBy: none
+		sourceColumn: zone
+
+	column service_zone
+		dataType: string
+		isHidden
+		lineageTag: f23f6222-ead7-43cd-88a0-97d66fd11647
+		summarizeBy: none
+		sourceColumn: service_zone
+
+	partition Zones = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "\dim_zone.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Selected = Table.SelectColumns(Headers, {"location_id", "borough", "zone", "service_zone"}),
+				    Typed = Table.TransformColumnTypes(Selected, {{"location_id", Int64.Type}, {"borough", type text}, {"zone", type text}, {"service_zone", type text}}, "en-US")
+				    , Labeled = Table.ReplaceValue(Typed, "", "Unknown", Replacer.ReplaceValue, {"borough", "zone", "service_zone"})
+				in
+				    Labeled
+

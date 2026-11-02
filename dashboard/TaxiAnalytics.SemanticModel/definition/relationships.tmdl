@@ -1,0 +1,28 @@
+relationship Months_Daily
+	fromColumn: Daily.source_month
+	toColumn: Months.source_month
+
+relationship Months_Pickup
+	fromColumn: Pickup.source_month
+	toColumn: Months.source_month
+
+relationship Months_Hourly
+	fromColumn: Hourly.source_month
+	toColumn: Months.source_month
+
+relationship Months_LoadAudit
+	fromColumn: LoadAudit.source_month
+	toColumn: Months.source_month
+
+relationship Months_Missing
+	fromColumn: Missing.source_month
+	toColumn: Months.source_month
+
+relationship Months_Checks
+	fromColumn: Checks.source_month
+	toColumn: Months.source_month
+
+relationship Zones_Pickup
+	fromColumn: Pickup.location_id
+	toColumn: Zones.location_id
+

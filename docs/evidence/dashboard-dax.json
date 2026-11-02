@@ -1,0 +1,101 @@
+{
+  "query": "EVALUATE SUMMARIZECOLUMNS(Months[source_month],\"Trips\",[Số chuyến],\"ZoneTrips\",[Chuyến theo khu vực],\"HourTrips\",[Chuyến theo giờ],\"AmountUSD\",[Tổng tiền ghi nhận],\"Raw\",[Dòng nguồn],\"Accepted\",[Dòng chấp nhận],\"Quarantine\",[Dòng cách ly],\"QuarantineRate\",[Tỷ lệ cách ly]) ORDER BY Months[source_month]",
+  "message": "DAX query executed successfully, returned 3 rows in 8ms",
+  "operation": "Execute",
+  "data": {
+    "rowCount": 3,
+    "isTruncated": false,
+    "columns": [
+      {
+        "name": "Months[source_month]",
+        "dataType": "String",
+        "isNullable": true,
+        "ordinal": 0
+      },
+      {
+        "name": "[Trips]",
+        "dataType": "Int64",
+        "isNullable": true,
+        "ordinal": 1
+      },
+      {
+        "name": "[ZoneTrips]",
+        "dataType": "Int64",
+        "isNullable": true,
+        "ordinal": 2
+      },
+      {
+        "name": "[HourTrips]",
+        "dataType": "Int64",
+        "isNullable": true,
+        "ordinal": 3
+      },
+      {
+        "name": "[AmountUSD]",
+        "dataType": "Double",
+        "isNullable": true,
+        "ordinal": 4
+      },
+      {
+        "name": "[Raw]",
+        "dataType": "Int64",
+        "isNullable": true,
+        "ordinal": 5
+      },
+      {
+        "name": "[Accepted]",
+        "dataType": "Int64",
+        "isNullable": true,
+        "ordinal": 6
+      },
+      {
+        "name": "[Quarantine]",
+        "dataType": "Int64",
+        "isNullable": true,
+        "ordinal": 7
+      },
+      {
+        "name": "[QuarantineRate]",
+        "dataType": "Double",
+        "isNullable": true,
+        "ordinal": 8
+      }
+    ],
+    "rows": [
+      {
+        "Months[source_month]": "2025-01",
+        "[Trips]": 3473153,
+        "[ZoneTrips]": 3473153,
+        "[HourTrips]": 3473153,
+        "[AmountUSD]": 88957650.59999973,
+        "[Raw]": 3475226,
+        "[Accepted]": 3473153,
+        "[Quarantine]": 2073,
+        "[QuarantineRate]": 0.0005965079681148794
+      },
+      {
+        "Months[source_month]": "2025-02",
+        "[Trips]": 3572348,
+        "[ZoneTrips]": 3572348,
+        "[HourTrips]": 3572348,
+        "[AmountUSD]": 89423626.8499998,
+        "[Raw]": 3577543,
+        "[Accepted]": 3572348,
+        "[Quarantine]": 5195,
+        "[QuarantineRate]": 0.0014521139228794735
+      },
+      {
+        "Months[source_month]": "2025-03",
+        "[Trips]": 4122944,
+        "[ZoneTrips]": 4122944,
+        "[HourTrips]": 4122944,
+        "[AmountUSD]": 108311093.55999939,
+        "[Raw]": 4145257,
+        "[Accepted]": 4122944,
+        "[Quarantine]": 22313,
+        "[QuarantineRate]": 0.005382778438104079
+      }
+    ],
+    "executionTimeMs": 8
+  }
+}

@@ -1,0 +1,1301 @@
+{
+  "name": "82fe48a3-953f-4ab3-b544-ead6dc89bdb6",
+  "compatibilityLevel": 1600,
+  "createdTimestamp": "2026-11-01T14:55:01.233333+07:00",
+  "lastUpdate": "2026-11-02T16:06:24.6+07:00",
+  "lastSchemaUpdate": "2026-11-02T16:06:21.943333+07:00",
+  "lastProcessed": "2026-11-01T14:55:23.526667+07:00",
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "modifiedTime": "2026-11-01T07:55:01.866667",
+    "structureModifiedTime": "2026-11-01T07:55:06.643333",
+    "tables": [
+      {
+        "name": "Daily",
+        "description": "ETL export: mart_daily.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "ad762b3b-023d-4e1b-b592-58c48b9c0618",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-01T07:55:01.873333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "source_month",
+            "dataType": "string",
+            "sourceColumn": "source_month",
+            "lineageTag": "fd493c30-9733-4b4c-a023-558fbe561254",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "pickup_date",
+            "dataType": "dateTime",
+            "sourceColumn": "pickup_date",
+            "formatString": "dd MMM",
+            "lineageTag": "152eed02-e672-4da4-a2da-7911bcd21848",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "trip_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "trip_count",
+            "lineageTag": "17e70179-bc59-47b7-9a60-ac743ef71f54",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "recorded_total_amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "recorded_total_amount",
+            "lineageTag": "8d8fc2a3-48ba-43ca-b1e5-e86ea56b2b90",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "avg_recorded_amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "avg_recorded_amount",
+            "lineageTag": "a9aed985-b4b4-4644-ad9e-729fc89f3c14",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "median_distance_miles",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "median_distance_miles",
+            "lineageTag": "0c0f30bc-ef38-4274-b5d9-0b6d6ce97688",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "median_duration_minutes",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "median_duration_minutes",
+            "lineageTag": "03a31136-890d-442c-b125-15d5dcebc84f",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "flagged_trip_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "flagged_trip_count",
+            "lineageTag": "4a624db7-bfa0-46a6-8fbe-236dc70ee306",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Daily",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.46",
+            "refreshedTime": "2026-11-01T07:55:23.46",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\mart_daily.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"source_month\", \"pickup_date\", \"trip_count\", \"recorded_total_amount\", \"avg_recorded_amount\", \"median_distance_miles\", \"median_duration_minutes\", \"flagged_trip_count\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"source_month\", type text}, {\"pickup_date\", type date}, {\"trip_count\", Int64.Type}, {\"recorded_total_amount\", type number}, {\"avg_recorded_amount\", type number}, {\"median_distance_miles\", type number}, {\"median_duration_minutes\", type number}, {\"flagged_trip_count\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Số chuyến",
+            "expression": "SUM(Daily[trip_count])",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "073afdcf-1345-478f-9d15-ded4a6bdb65b",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tổng tiền ghi nhận",
+            "expression": "SUM(Daily[recorded_total_amount])",
+            "formatString": "$#,0.00;($#,0.00)",
+            "displayFolder": "Dashboard",
+            "lineageTag": "d95abf65-b36f-4262-8448-6620ef70ccf6",
+            "dataType": "double",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tiền / chuyến",
+            "expression": "DIVIDE([Tổng tiền ghi nhận],[Số chuyến])",
+            "formatString": "$0.00",
+            "displayFolder": "Dashboard",
+            "lineageTag": "64b2517a-2cec-415a-b3e9-6b9bbc4cc4ce",
+            "dataType": "double",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Chuyến gắn cờ",
+            "expression": "SUM(Daily[flagged_trip_count])",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "506ce6f1-7d71-423b-8777-07bc60f81b95",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tỷ lệ gắn cờ",
+            "expression": "DIVIDE([Chuyến gắn cờ],[Số chuyến])",
+            "formatString": "0.0%",
+            "displayFolder": "Dashboard",
+            "lineageTag": "86b466a7-75b0-46df-8d6d-22e0238762ad",
+            "dataType": "double",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          }
+        ]
+      },
+      {
+        "name": "Pickup",
+        "description": "ETL export: mart_pickup_zone.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "22a31225-213f-4a59-ba01-3028edf5ae14",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-02T09:06:21.976667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "source_month",
+            "dataType": "string",
+            "sourceColumn": "source_month",
+            "lineageTag": "20c46448-f60a-4fce-8dba-9dbc192c6491",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "location_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "location_id",
+            "lineageTag": "c0a837db-cb0c-4a7e-9b46-955bcff3ced5",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "trip_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "trip_count",
+            "lineageTag": "4988f05a-d389-43a6-933d-e67472de31fb",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "recorded_total_amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "recorded_total_amount",
+            "lineageTag": "5fba1ac6-9f0d-42a6-af30-da9fa5eb33a8",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "flagged_trip_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "flagged_trip_count",
+            "lineageTag": "9d5c1ec2-c6fa-4d27-973d-88fb58070f54",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.836667",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Pickup",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.493333",
+            "refreshedTime": "2026-11-01T07:55:23.493333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\mart_pickup_zone.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"source_month\", \"location_id\", \"trip_count\", \"recorded_total_amount\", \"flagged_trip_count\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"source_month\", type text}, {\"location_id\", Int64.Type}, {\"trip_count\", Int64.Type}, {\"recorded_total_amount\", type number}, {\"flagged_trip_count\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Chuyến theo khu vực",
+            "expression": "SUM(Pickup[trip_count])",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "04a612a6-0626-4821-84c3-62144003bae7",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Hạng khu vực",
+            "expression": "RANKX(ALL(Zones[zone]),[Chuyến theo khu vực],,DESC,Dense)",
+            "formatString": "0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "69385503-64eb-4822-b490-4d4405fc6d87",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tiền theo khu vực",
+            "expression": "SUM(Pickup[recorded_total_amount])",
+            "formatString": "$#,0.00",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "21bb6161-1075-45a6-ac80-eb67c94bbe2e",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Tiền / chuyến khu vực",
+            "expression": "DIVIDE([Tiền theo khu vực],[Chuyến theo khu vực])",
+            "formatString": "$0.00",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "76f00046-434a-4c4e-86ca-75d0e80b460f",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Chuyến gắn cờ khu vực",
+            "expression": "SUM(Pickup[flagged_trip_count])",
+            "formatString": "#,0",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "863893e9-93da-4299-801b-37c61e2dcdda",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Tỷ lệ gắn cờ khu vực",
+            "expression": "DIVIDE([Chuyến gắn cờ khu vực],[Chuyến theo khu vực])",
+            "formatString": "0.0%",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "30678ca8-747d-4908-b702-603718102ce8",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Tỷ trọng chuyến khu vực",
+            "description": "Share of trips within the external selection; ALLSELECTED removes the table row zone/borough context and preserves month and selected Borough.",
+            "expression": "DIVIDE([Chuyến theo khu vực],CALCULATE([Chuyến theo khu vực],ALLSELECTED(Zones)))",
+            "formatString": "0.0%",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "3e7b4d6a-914f-4f8e-a955-473984259405",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:09:41.013333",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Số khu vực có chuyến",
+            "expression": "COUNTROWS(FILTER(VALUES(Pickup[location_id]),CALCULATE([Chuyến theo khu vực])>0))",
+            "formatString": "#,0",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "56bd0e1b-221f-43ab-8253-e22b75809e1e",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          }
+        ]
+      },
+      {
+        "name": "Hourly",
+        "description": "ETL export: mart_hourly.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "e236e210-bc31-49d4-b0cf-0540269bfc05",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-02T09:06:21.976667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.536667"
+            }
+          },
+          {
+            "name": "source_month",
+            "dataType": "string",
+            "sourceColumn": "source_month",
+            "lineageTag": "6564be49-3983-452e-afdc-f4bef119b7c8",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "iso_weekday",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "iso_weekday",
+            "lineageTag": "91ad6c7a-d791-4965-9311-9f9335ef113b",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "pickup_hour",
+            "dataType": "int64",
+            "sourceColumn": "pickup_hour",
+            "lineageTag": "3d6dc77d-3988-4cac-824c-7f61450d8473",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "trip_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "trip_count",
+            "lineageTag": "ca723afa-3a1e-4094-bcb9-363bbefe700f",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "recorded_total_amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "recorded_total_amount",
+            "lineageTag": "ee01217e-fddd-427f-bc2d-5762049fbc66",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.816667",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "type": "calculated",
+            "name": "Thứ",
+            "dataType": "string",
+            "expression": "SWITCH(Hourly[iso_weekday],1,\"Thứ 2\",2,\"Thứ 3\",3,\"Thứ 4\",4,\"Thứ 5\",5,\"Thứ 6\",6,\"Thứ 7\",7,\"Chủ nhật\")",
+            "sortByColumn": "iso_weekday",
+            "lineageTag": "3aef39f8-c2d6-43ae-a589-9462725b5f15",
+            "modifiedTime": "2026-11-02T09:06:24.586667",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667",
+            "refreshedTime": "2026-11-02T09:06:24.586667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-02T09:06:24.586667",
+              "refreshedTime": "2026-11-02T09:06:24.586667"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Hourly",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.493333",
+            "refreshedTime": "2026-11-01T07:55:23.493333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\mart_hourly.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"source_month\", \"iso_weekday\", \"pickup_hour\", \"trip_count\", \"recorded_total_amount\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"source_month\", type text}, {\"iso_weekday\", Int64.Type}, {\"pickup_hour\", Int64.Type}, {\"trip_count\", Int64.Type}, {\"recorded_total_amount\", type number}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Chuyến theo giờ",
+            "expression": "SUM(Hourly[trip_count])",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "f335147e-e7ea-4abe-b90c-629d7e2f4cb5",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tiền theo giờ",
+            "expression": "SUM(Hourly[recorded_total_amount])",
+            "formatString": "$#,0.00",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "1b73f3f4-a17a-4049-9a74-7aaa81a96a1a",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Tiền / chuyến theo giờ",
+            "expression": "DIVIDE([Tiền theo giờ],[Chuyến theo giờ])",
+            "formatString": "$0.00",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "e4e300a5-6240-4e5a-b2a7-ef0d71578005",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Số ngày cùng thứ",
+            "expression": "VAR DaysSelected = VALUES(Hourly[iso_weekday]) RETURN COUNTROWS(FILTER(Daily, WEEKDAY(Daily[pickup_date],2) IN DaysSelected))",
+            "formatString": "#,0",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "ab2451ae-305d-4381-8917-8ec5304bc055",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Chuyến / ngày theo thời điểm",
+            "expression": "DIVIDE([Chuyến theo giờ],[Số ngày cùng thứ])",
+            "formatString": "#,0",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "748ae537-c35e-4b07-b8b2-23ef81d4d534",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          },
+          {
+            "name": "Tỷ trọng chuyến cuối tuần",
+            "expression": "DIVIDE(CALCULATE([Chuyến theo giờ], REMOVEFILTERS(Hourly[pickup_hour],Hourly[Thứ],Hourly[iso_weekday]),Hourly[iso_weekday] IN {6,7}),CALCULATE([Chuyến theo giờ],REMOVEFILTERS(Hourly[pickup_hour],Hourly[Thứ],Hourly[iso_weekday])))",
+            "formatString": "0.0%",
+            "displayFolder": "Phân tích chuyên sâu",
+            "lineageTag": "e661107d-43ed-4948-8371-0b7ac8a735a4",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:22.08",
+            "structureModifiedTime": "2026-11-02T09:06:21.976667"
+          }
+        ]
+      },
+      {
+        "name": "Zones",
+        "description": "ETL export: dim_zone.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "7528b8e9-a35a-4419-9275-b299c588887d",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-01T07:55:01.876667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.816667",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "location_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "location_id",
+            "lineageTag": "877eb79d-13e0-42ac-a61c-7f637be7b6de",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "borough",
+            "dataType": "string",
+            "sourceColumn": "borough",
+            "lineageTag": "3ffefd3d-691f-4195-b78c-a72e069eb89a",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.816667",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "zone",
+            "dataType": "string",
+            "sourceColumn": "zone",
+            "lineageTag": "91872a8d-966b-4e43-9869-caf8c784b332",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "service_zone",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "service_zone",
+            "lineageTag": "f23f6222-ead7-43cd-88a0-97d66fd11647",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Zones",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.526667",
+            "refreshedTime": "2026-11-01T07:55:23.526667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\dim_zone.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"location_id\", \"borough\", \"zone\", \"service_zone\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"location_id\", Int64.Type}, {\"borough\", type text}, {\"zone\", type text}, {\"service_zone\", type text}}, \"en-US\")\n    , Labeled = Table.ReplaceValue(Typed, \"\", \"Unknown\", Replacer.ReplaceValue, {\"borough\", \"zone\", \"service_zone\"})\nin\n    Labeled"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LoadAudit",
+        "description": "ETL export: etl_manifest.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "f88a199c-3807-476d-bbe2-88ffd5cd447a",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-01T07:55:01.876667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "source_month",
+            "dataType": "string",
+            "sourceColumn": "source_month",
+            "lineageTag": "97c8ddcf-9c71-49c6-bb12-89681391c9e2",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "raw_rows",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "raw_rows",
+            "lineageTag": "a09f353f-2ad0-45f9-8f3e-755c278203c9",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "accepted_rows",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "accepted_rows",
+            "lineageTag": "5d4466d1-47f7-497f-b859-c118cad14d71",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "quarantined_rows",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "quarantined_rows",
+            "lineageTag": "03284b93-85a6-4460-aae1-f88f20550ab5",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.823333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LoadAudit",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.456667",
+            "refreshedTime": "2026-11-01T07:55:23.456667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\etl_manifest.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"source_month\", \"raw_rows\", \"accepted_rows\", \"quarantined_rows\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"source_month\", type text}, {\"raw_rows\", Int64.Type}, {\"accepted_rows\", Int64.Type}, {\"quarantined_rows\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Dòng nguồn",
+            "expression": "SUM(LoadAudit[raw_rows])",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "1f4811a8-f35b-427b-8ef2-335985e52292",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Dòng chấp nhận",
+            "expression": "SUM(LoadAudit[accepted_rows])",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "d9f735fa-dfa0-49b4-9a8f-29f45407c1a7",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Dòng cách ly",
+            "expression": "SUM(LoadAudit[quarantined_rows])",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "4673619c-7bb7-46db-bc99-faeddccfa60d",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tỷ lệ cách ly",
+            "expression": "DIVIDE([Dòng cách ly],[Dòng nguồn])",
+            "formatString": "0.00%",
+            "displayFolder": "Dashboard",
+            "lineageTag": "6235e15f-393e-407d-96c6-c71405ebcaff",
+            "dataType": "double",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tỷ lệ chấp nhận",
+            "expression": "DIVIDE([Dòng chấp nhận],[Dòng nguồn])",
+            "formatString": "0.00%",
+            "displayFolder": "Dashboard",
+            "lineageTag": "811da05f-154a-4ce1-a0ec-2fe7c55ade23",
+            "dataType": "double",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          }
+        ]
+      },
+      {
+        "name": "Missing",
+        "description": "ETL export: dq_missing.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "cee9d2a3-76f1-4cc2-af41-72f3ff1ae1e7",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-01T07:55:01.876667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "source_month",
+            "dataType": "string",
+            "sourceColumn": "source_month",
+            "lineageTag": "a7b78a4e-d6be-438e-b20b-b4f087db9188",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "column_name",
+            "dataType": "string",
+            "sourceColumn": "column_name",
+            "lineageTag": "409fca3d-4a59-45d3-bd5c-02cb9845badb",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "raw_rows",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "raw_rows",
+            "lineageTag": "ca704d18-f716-41d4-93aa-dea39791b25e",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "missing_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "missing_count",
+            "lineageTag": "12730e27-a9e2-43f1-9256-2c39e6aa3279",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "missing_pct",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "missing_pct",
+            "lineageTag": "b81a697f-7ea1-422f-87b2-eb8911e0fec2",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Missing",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.456667",
+            "refreshedTime": "2026-11-01T07:55:23.456667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\dq_missing.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"source_month\", \"column_name\", \"raw_rows\", \"missing_count\", \"missing_pct\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"source_month\", type text}, {\"column_name\", type text}, {\"raw_rows\", Int64.Type}, {\"missing_count\", Int64.Type}, {\"missing_pct\", type number}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Giá trị thiếu",
+            "description": "Per-column count only; grand total across columns intentionally blank.",
+            "expression": "IF(ISINSCOPE(Missing[column_name]), SUM(Missing[missing_count]))",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "7ccd2b92-2e32-4835-95ac-9a1bc091f51d",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-02T09:06:21.98",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          },
+          {
+            "name": "Tỷ lệ thiếu",
+            "description": "Weighted by source rows within the selected months; no total across columns.",
+            "expression": "IF(ISINSCOPE(Missing[column_name]), DIVIDE(SUM(Missing[missing_count]),SUM(Missing[raw_rows])))",
+            "formatString": "0.00%",
+            "displayFolder": "Dashboard",
+            "lineageTag": "7b7f8814-6d5e-4bdf-b049-964e95ea2335",
+            "dataType": "double",
+            "modifiedTime": "2026-11-02T09:06:21.98",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667"
+          }
+        ]
+      },
+      {
+        "name": "Checks",
+        "description": "ETL export: dq_checks.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "2dae685a-97aa-4266-b0f1-fcb81bb3ee14",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-01T07:55:01.876667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "source_month",
+            "dataType": "string",
+            "sourceColumn": "source_month",
+            "lineageTag": "e6161481-8753-446f-91b9-e95ae0ed9543",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "check_name",
+            "dataType": "string",
+            "sourceColumn": "check_name",
+            "lineageTag": "2f9ba86a-a318-4286-a181-a62fbb76e571",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.81",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          },
+          {
+            "name": "row_count",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "row_count",
+            "lineageTag": "b3a7012e-6856-444f-8aad-4a278b3aa401",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.53"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Checks",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.456667",
+            "refreshedTime": "2026-11-01T07:55:23.456667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\dq_checks.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"source_month\", \"check_name\", \"row_count\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"source_month\", type text}, {\"check_name\", type text}, {\"row_count\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Số dòng theo kiểm tra",
+            "description": "Counts overlap across checks. Grand total intentionally blank.",
+            "expression": "IF(ISINSCOPE(Checks[check_name]), SUM(Checks[row_count]))",
+            "formatString": "#,0",
+            "displayFolder": "Dashboard",
+            "lineageTag": "fc145cb3-9d5a-49e0-81dd-be157f0d052a",
+            "dataType": "int64",
+            "modifiedTime": "2026-11-02T09:06:21.98",
+            "structureModifiedTime": "2026-11-01T07:55:01.88"
+          }
+        ]
+      },
+      {
+        "name": "Months",
+        "description": "ETL export: etl_manifest.csv. Grain and caveats: docs/power-bi.md.",
+        "lineageTag": "54b4d04d-9e15-48c8-b2f2-58459fe5221b",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-01T07:55:01.876667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-11-01T07:55:01.88",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.813333",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          },
+          {
+            "name": "source_month",
+            "dataType": "string",
+            "sourceColumn": "source_month",
+            "lineageTag": "888ced9a-b286-4b26-95fd-44d4c4cfddde",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-11-01T07:55:06.643333",
+            "structureModifiedTime": "2026-11-01T07:55:01.876667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-11-01T07:55:06.816667",
+              "refreshedTime": "2026-11-01T07:55:23.533333"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Months",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-11-01T07:55:23.473333",
+            "refreshedTime": "2026-11-01T07:55:23.473333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Csv.Document(File.Contents(DataRoot & \"\\etl_manifest.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Selected = Table.SelectColumns(Headers, {\"source_month\"}),\n    Typed = Table.TransformColumnTypes(Selected, {{\"source_month\", type text}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "Months_Daily",
+        "fromTable": "Daily",
+        "fromColumn": "source_month",
+        "toTable": "Months",
+        "toColumn": "source_month",
+        "state": "ready",
+        "modifiedTime": "2026-11-01T07:55:06.816667",
+        "refreshedTime": "2026-11-01T07:55:23.533333"
+      },
+      {
+        "name": "Months_Pickup",
+        "fromTable": "Pickup",
+        "fromColumn": "source_month",
+        "toTable": "Months",
+        "toColumn": "source_month",
+        "state": "ready",
+        "modifiedTime": "2026-11-01T07:55:06.823333",
+        "refreshedTime": "2026-11-01T07:55:23.536667"
+      },
+      {
+        "name": "Months_Hourly",
+        "fromTable": "Hourly",
+        "fromColumn": "source_month",
+        "toTable": "Months",
+        "toColumn": "source_month",
+        "state": "ready",
+        "modifiedTime": "2026-11-01T07:55:06.816667",
+        "refreshedTime": "2026-11-01T07:55:23.533333"
+      },
+      {
+        "name": "Months_LoadAudit",
+        "fromTable": "LoadAudit",
+        "fromColumn": "source_month",
+        "toTable": "Months",
+        "toColumn": "source_month",
+        "state": "ready",
+        "modifiedTime": "2026-11-01T07:55:06.816667",
+        "refreshedTime": "2026-11-01T07:55:23.533333"
+      },
+      {
+        "name": "Months_Missing",
+        "fromTable": "Missing",
+        "fromColumn": "source_month",
+        "toTable": "Months",
+        "toColumn": "source_month",
+        "state": "ready",
+        "modifiedTime": "2026-11-01T07:55:06.823333",
+        "refreshedTime": "2026-11-01T07:55:23.533333"
+      },
+      {
+        "name": "Months_Checks",
+        "fromTable": "Checks",
+        "fromColumn": "source_month",
+        "toTable": "Months",
+        "toColumn": "source_month",
+        "state": "ready",
+        "modifiedTime": "2026-11-01T07:55:06.823333",
+        "refreshedTime": "2026-11-01T07:55:23.533333"
+      },
+      {
+        "name": "Zones_Pickup",
+        "fromTable": "Pickup",
+        "fromColumn": "location_id",
+        "toTable": "Zones",
+        "toColumn": "location_id",
+        "state": "ready",
+        "modifiedTime": "2026-11-01T07:55:06.836667",
+        "refreshedTime": "2026-11-01T07:55:23.536667"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "en-US",
+        "modifiedTime": "2026-11-01T07:55:06.643333",
+        "structureModifiedTime": "2026-11-01T07:55:06.643333",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "1.0.0",
+            "Language": "en-US"
+          },
+          "contentType": "json",
+          "modifiedTime": "2026-11-02T09:06:21.98"
+        }
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataRoot",
+        "kind": "m",
+        "expression": "\"Y:\\Data Analyst\\Data Work\\Project Analyst\\Taxi\\nyc-taxi-etl\\artifacts\\exports\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "lineageTag": "96b167bd-8d66-4259-8041-926cf203a68d",
+        "modifiedTime": "2026-11-01T07:55:06.643333"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Daily\",\"Pickup\",\"Hourly\",\"Zones\",\"LoadAudit\",\"Missing\",\"Checks\",\"Months\",\"DataRoot\"]",
+        "modifiedTime": "2026-11-01T07:55:42.976667"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0",
+        "modifiedTime": "2026-11-01T07:55:01.88"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.142.1277.0 (25.04)+014fde450f93691fc9537f0758d73d1c5df153ef",
+        "modifiedTime": "2026-11-01T07:55:06.643333"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"MCP-PBIModeling\",\"DevMode\"]",
+        "modifiedTime": "2026-11-01T07:55:49.226667"
+      }
+    ]
+  }
+}

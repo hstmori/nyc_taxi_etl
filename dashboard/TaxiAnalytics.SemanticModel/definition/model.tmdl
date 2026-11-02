@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Daily","Pickup","Hourly","Zones","LoadAudit","Missing","Checks","Months","DataRoot"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.142.1277.0 (25.04)+014fde450f93691fc9537f0758d73d1c5df153ef
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+ref table Daily
+ref table Pickup
+ref table Hourly
+ref table Zones
+ref table LoadAudit
+ref table Missing
+ref table Checks
+ref table Months
+
+ref cultureInfo en-US
+

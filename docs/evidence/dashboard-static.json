@@ -1,0 +1,10 @@
+{
+  "visual_bindings_checked": 46,
+  "model_tables": 8,
+  "model_relationships": 7,
+  "layout_bounds_and_overlap": "passed",
+  "csv_month_reconciliation": "passed",
+  "accepted_trips": 11168445,
+  "recorded_amount_usd": 286692371.0099989,
+  "note": "Static/data checks only; Desktop render and live DAX checks are recorded separately."
+}

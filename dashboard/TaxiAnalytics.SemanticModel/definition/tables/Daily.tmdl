@@ -1,0 +1,95 @@
+/// ETL export: mart_daily.csv. Grain and caveats: docs/power-bi.md.
+table Daily
+	lineageTag: ad762b3b-023d-4e1b-b592-58c48b9c0618
+
+	measure 'Số chuyến' = SUM(Daily[trip_count])
+		formatString: #,0
+		displayFolder: Dashboard
+		lineageTag: 073afdcf-1345-478f-9d15-ded4a6bdb65b
+
+	measure 'Tổng tiền ghi nhận' = SUM(Daily[recorded_total_amount])
+		formatString: $#,0.00;($#,0.00)
+		displayFolder: Dashboard
+		lineageTag: d95abf65-b36f-4262-8448-6620ef70ccf6
+
+	measure 'Tiền / chuyến' = DIVIDE([Tổng tiền ghi nhận],[Số chuyến])
+		formatString: $0.00
+		displayFolder: Dashboard
+		lineageTag: 64b2517a-2cec-415a-b3e9-6b9bbc4cc4ce
+
+	measure 'Chuyến gắn cờ' = SUM(Daily[flagged_trip_count])
+		formatString: #,0
+		displayFolder: Dashboard
+		lineageTag: 506ce6f1-7d71-423b-8777-07bc60f81b95
+
+	measure 'Tỷ lệ gắn cờ' = DIVIDE([Chuyến gắn cờ],[Số chuyến])
+		formatString: 0.0%
+		displayFolder: Dashboard
+		lineageTag: 86b466a7-75b0-46df-8d6d-22e0238762ad
+
+	column source_month
+		dataType: string
+		lineageTag: fd493c30-9733-4b4c-a023-558fbe561254
+		summarizeBy: none
+		sourceColumn: source_month
+
+	column pickup_date
+		dataType: dateTime
+		formatString: dd MMM
+		lineageTag: 152eed02-e672-4da4-a2da-7911bcd21848
+		summarizeBy: none
+		sourceColumn: pickup_date
+
+	column trip_count
+		dataType: int64
+		isHidden
+		lineageTag: 17e70179-bc59-47b7-9a60-ac743ef71f54
+		summarizeBy: none
+		sourceColumn: trip_count
+
+	column recorded_total_amount
+		dataType: double
+		isHidden
+		lineageTag: 8d8fc2a3-48ba-43ca-b1e5-e86ea56b2b90
+		summarizeBy: none
+		sourceColumn: recorded_total_amount
+
+	column avg_recorded_amount
+		dataType: double
+		isHidden
+		lineageTag: a9aed985-b4b4-4644-ad9e-729fc89f3c14
+		summarizeBy: none
+		sourceColumn: avg_recorded_amount
+
+	column median_distance_miles
+		dataType: double
+		isHidden
+		lineageTag: 0c0f30bc-ef38-4274-b5d9-0b6d6ce97688
+		summarizeBy: none
+		sourceColumn: median_distance_miles
+
+	column median_duration_minutes
+		dataType: double
+		isHidden
+		lineageTag: 03a31136-890d-442c-b125-15d5dcebc84f
+		summarizeBy: none
+		sourceColumn: median_duration_minutes
+
+	column flagged_trip_count
+		dataType: int64
+		isHidden
+		lineageTag: 4a624db7-bfa0-46a6-8fbe-236dc70ee306
+		summarizeBy: none
+		sourceColumn: flagged_trip_count
+
+	partition Daily = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataRoot & "\mart_daily.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Selected = Table.SelectColumns(Headers, {"source_month", "pickup_date", "trip_count", "recorded_total_amount", "avg_recorded_amount", "median_distance_miles", "median_duration_minutes", "flagged_trip_count"}),
+				    Typed = Table.TransformColumnTypes(Selected, {{"source_month", type text}, {"pickup_date", type date}, {"trip_count", Int64.Type}, {"recorded_total_amount", type number}, {"avg_recorded_amount", type number}, {"median_distance_miles", type number}, {"median_duration_minutes", type number}, {"flagged_trip_count", Int64.Type}}, "en-US")
+				in
+				    Typed
+
